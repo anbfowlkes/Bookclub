@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
     def home
-        render json: { hello: "again" }
+        render json: Book.all
     end
 end
