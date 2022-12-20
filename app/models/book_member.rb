@@ -1,0 +1,2 @@
+class BookMember < ApplicationRecord
+end
