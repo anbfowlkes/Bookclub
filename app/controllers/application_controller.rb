@@ -1,5 +1,3 @@
 class ApplicationController < ActionController::Base
-    def home
-        render json: Book.all
-    end
+    skip_before_action :verify_authenticity_token
 end

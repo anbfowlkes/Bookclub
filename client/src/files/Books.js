@@ -3,6 +3,7 @@ import BookCard from './BookCard.js'
 
 let Books = () => {
 
+    let c = 0
     let [booksArray, setBooksArray] = useState([])
 
     let getBooks = async () => {
@@ -63,7 +64,7 @@ let Books = () => {
         <div>
             {booksArray.map((book) => {
                 return(
-                    <BookCard id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
+                    <BookCard key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
                 )
             })}
         </div>

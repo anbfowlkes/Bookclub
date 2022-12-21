@@ -1,14 +1,23 @@
+import { useState } from 'react'
 import './BookCard.css'
+import UpdateBook from './UpdateBook'
 
-let BookCard = ({id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
+let BookCard = ({getBooks,id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
+
+    let [showUpdate, setShowUpdate] = useState(false)
 
     let updateClick = () => {
         console.log('update click clicked')
+        setShowUpdate(prev => !prev)
     }
     
     let deleteClick = async () => {
         console.log('delete click clicked')
-        // let  req = await fetch()
+        console.log('id is: ', id)
+        let req = await fetch(`http://localhost:3000/books/${id}`, {method: 'DELETE'})
+        let res = await req.json()
+        console.log(res)
+        getBooks()
     }
 
     return(
@@ -21,10 +30,14 @@ let BookCard = ({id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) =>
                 <p>{author}</p>
                 <p>{leader}</p>
                 <p>{dateDisplayer(date)}</p>
+                {fiction ? <p>{'Fiction'}</p> : <p>{'Non-Fiction'}</p>}
             </div>
             <div id='card-buttons'>
                 <button onClick={updateClick}>Update</button>
                 <button onClick={deleteClick}>Delete</button>
+            </div>
+            <div>
+                {showUpdate ? <UpdateBook /> : null}
             </div>
         </div>
     )
