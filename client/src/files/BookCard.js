@@ -37,7 +37,7 @@ let BookCard = ({getBooks,id,title,author,imageUrl,fiction,leader,date,dateDispl
                 <button onClick={deleteClick}>Delete</button>
             </div>
             <div>
-                {showUpdate ? <UpdateBook /> : null}
+                {showUpdate ? <UpdateBook id={id} getBooks={getBooks}/> : null}
             </div>
         </div>
     )

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   delete '/books/:id', to: 'books#destroy'
 
+  patch '/books/:id', to: 'books#update'
+
 end

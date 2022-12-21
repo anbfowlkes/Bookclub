@@ -1,15 +1,20 @@
 import { useEffect, useState } from 'react'
 import BookCard from './BookCard.js'
+import AddBook from './AddBook.js'
 
 let Books = () => {
 
     let c = 0
     let [booksArray, setBooksArray] = useState([])
+    let [newBookBool, setNewBookBool] = useState(false)
 
     let getBooks = async () => {
         let req = await fetch('http://localhost:3000/books')
         let res = await req.json()
         console.log(res)
+        res = res.sort((a,b) => {
+            return a.title < b.title ? -1 : 1
+        })
         setBooksArray(res)
     }
 
@@ -61,13 +66,19 @@ let Books = () => {
 
 
     return(
-        <div>
-            {booksArray.map((book) => {
-                return(
-                    <BookCard key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
-                )
-            })}
-        </div>
+        <>
+            <div>
+                <button onClick={() => setNewBookBool(prev => !prev)}>Add a Book</button>
+            </div>
+            {newBookBool ? <AddBook getBooks={getBooks} /> : null }
+            <div id='past-books'>
+                {booksArray.map((book) => {
+                    return(
+                        <BookCard key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
+                        )
+                    })}
+            </div>
+        </>
     )
 }
 

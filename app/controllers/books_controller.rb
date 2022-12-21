@@ -19,4 +19,19 @@ class BooksController < ApplicationController
         end
     end
 
+    def update
+        book = Book.find_by(id: params[:id])
+        if book.update(book_params)
+            render json: book
+        else
+            render json: {error: book.errors.full_messages}, status: 422
+        end
+    end
+
+    private
+
+    def book_params
+        params.permit(:title, :author, :leader, :image_url, :fiction, :meeting_date)
+    end
+
 end

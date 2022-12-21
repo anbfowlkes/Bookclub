@@ -1,19 +1,94 @@
-let UpdateBook = () => {
+let UpdateBook = ( {id,getBooks} ) => {
 
-    let updateTitle = (e) => {
+    let updateTitle = async (e) => {
         e.preventDefault()
+        let newTitle = e.target[0].value
+        console.log(newTitle)
+        let req = await fetch(`http://localhost:3000/books/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                title: newTitle
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        let res = await req.json()
+        console.log(res)
+        getBooks()
     }
 
-    let updateAuthor = (e) => {
+    let updateAuthor = async (e) => {
         e.preventDefault()
+        let newAuthor = e.target[0].value
+        let req = await fetch(`http://localhost:3000/books/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                author: newAuthor
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        let res = await req.json()
+        console.log(res)
+        getBooks()
     }
 
-    let updateLeader = (e) => {
+    let updateLeader = async (e) => {
         e.preventDefault()
+        let newLeader = e.target[0].value
+        let req = await fetch(`http://localhost:3000/books/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                leader: newLeader
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        let res = await req.json()
+        console.log(res)
+        getBooks()
     }
 
-    let updateDate = (e) => {
+    let updateDate = async (e) => {
         e.preventDefault()
+        let newDate = e.target[0].value
+        let req = await fetch(`http://localhost:3000/books/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                meeting_date: newDate
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        let res = await req.json()
+        console.log(res)
+        getBooks()
+    }
+
+    let updateGenre = async (e) => {
+        e.preventDefault()
+        let newGenre = e.target[0].value
+        if (newGenre === 'Select Value') {
+            return
+        }
+        let bool
+        newGenre === 'Fiction' ? bool = true : bool = false
+        let req = await fetch(`http://localhost:3000/books/${id}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                fiction: bool
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        let res = await req.json()
+        console.log(res)
+        getBooks()
     }
 
     let updateFiction = (e) => {
@@ -43,7 +118,7 @@ let UpdateBook = () => {
                 <input type='text' placeholder='Enter as --/--/----' />
                 <input type='submit' value='Change Date' />
             </form>
-            <form onSubmit={updateFiction}>
+            <form onSubmit={updateGenre}>
                 <select name='Fiction or Non-Fiction' onSubmit={updateFiction}>
                     <option>Select Value</option>
                     <option>Fiction</option>

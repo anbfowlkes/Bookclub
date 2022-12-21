@@ -22,3 +22,12 @@
     flex-direction: column;
     gap: 20px;
 }
+
+#past-books{
+    margin-top: 200px;
+}
+
+#add-book-form{
+    display: flex;
+    flex-direction: column;
+}
