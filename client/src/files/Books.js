@@ -6,7 +6,7 @@ let Books = () => {
     let [booksArray, setBooksArray] = useState([])
 
     let getBooks = async () => {
-        let req = await fetch('http://localhost:3000/home')
+        let req = await fetch('http://localhost:3000/books')
         let res = await req.json()
         console.log(res)
         setBooksArray(res)
@@ -63,7 +63,7 @@ let Books = () => {
         <div>
             {booksArray.map((book) => {
                 return(
-                    <BookCard title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
+                    <BookCard id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
                 )
             })}
         </div>

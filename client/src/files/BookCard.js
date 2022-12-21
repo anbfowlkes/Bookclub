@@ -1,7 +1,16 @@
 import './BookCard.css'
 
-let BookCard = ({title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
+let BookCard = ({id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
+
+    let updateClick = () => {
+        console.log('update click clicked')
+    }
     
+    let deleteClick = async () => {
+        console.log('delete click clicked')
+        // let  req = await fetch()
+    }
+
     return(
         <div id='book-card'>
             <div>
@@ -12,6 +21,10 @@ let BookCard = ({title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
                 <p>{author}</p>
                 <p>{leader}</p>
                 <p>{dateDisplayer(date)}</p>
+            </div>
+            <div id='card-buttons'>
+                <button onClick={updateClick}>Update</button>
+                <button onClick={deleteClick}>Delete</button>
             </div>
         </div>
     )

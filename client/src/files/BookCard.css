@@ -16,3 +16,9 @@
 #book-card-image {
     width: 100px;
 }
+
+#card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
