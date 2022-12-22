@@ -17,19 +17,21 @@ let AddBook = ( {getBooks} ) => {
         if (genre === 'Select Genre') {
             return
         }
+        console.log(genreBool)
         let req = await fetch('http://localhost:3000/books', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
                 title: title,
                 author: author,
                 image_url: imageUrl,
                 leader: leader,
                 meeting_date: date,
-                genre: genreBool
+                fiction: genreBool
             })
         })
         let res = await req.json()
+        console.log(res)
         getBooks()
     }
 

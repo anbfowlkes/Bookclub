@@ -28,6 +28,10 @@ class BooksController < ApplicationController
         end
     end
 
+    def create
+        book = Book.create!(book_params)
+    end
+
     private
 
     def book_params
