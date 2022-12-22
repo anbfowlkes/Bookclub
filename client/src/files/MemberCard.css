@@ -1,0 +1,18 @@
+#member-card {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#member-info p {
+    margin-top: -5px;
+}
+
+#member-card-image {
+    width: 100px;
+}
