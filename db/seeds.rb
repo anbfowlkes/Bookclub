@@ -4,6 +4,23 @@ Book.destroy_all
 Member.destroy_all
 BookMember.destroy_all
 
+puts "Creating members..."
+
+member1 = Member.create!(name: "Susan Baruch", image: "https://i.imgur.com/vA1eXrk_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member2 = Member.create!(name: "Chris Carey", image: "https://i.imgur.com/tO2e1DM_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member3 = Member.create!(name: "Mary Helen Dolan", image: "https://i.imgur.com/ZKR9ZlC.jpg", active: true)
+member4 = Member.create!(name: "Debbie Doyle", image: "https://i.imgur.com/lsy1eea_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member5 = Member.create!(name: "Linda Epstein", image: "", active: true)
+member6 = Member.create!(name: "Eleanor Newton", image: "https://i.imgur.com/LhTV1JR_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member7 = Member.create!(name: "Lisa Tietz", image: "https://i.imgur.com/VccmAtX_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member8 = Member.create!(name: "Marcie Ver Ploeg", image: "https://i.imgur.com/2mVE0vg_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member9 = Member.create!(name: "Nancy Warren-Oliver", image: "https://i.imgur.com/PvsJB9z_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: true)
+member10 = Member.create!(name: "Margaret Beck", image: "https://i.imgur.com/3XCBWcr.jpg", active: false)
+member11 = Member.create!(name: "Marjorie Relin", image: "https://i.imgur.com/FronkHO_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: false)
+member11 = Member.create!(name: "Martha Kelly", image: "https://i.imgur.com/NXgSl64_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: false)
+member11 = Member.create!(name: "Edna Shafer", image: "https://i.imgur.com/8SxJK5G_d.jpg?maxwidth=520&shape=thumb&fidelity=high", active: false)
+member11 = Member.create!(name: "Caroline Williams", image: "", active: false)
+
 puts "Creating books..."
 
 book1 = Book.create!(title: "Plain Song", author: "Kent Haruf", image_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388200586l/77156.jpg", fiction: true, leader: "Martha", meeting_date: "09/01/2000")
