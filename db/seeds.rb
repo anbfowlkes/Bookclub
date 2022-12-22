@@ -213,91 +213,91 @@ book94 = Book.create!(title: "Three Cups of Tea", author: "G. Mortenson and D. R
 
 book95 = Book.create!(title: "The Wednesday Sisters", author: "Meg Waite Clayton", image_url: "https://m.media-amazon.com/images/I/51ke98FfmFL.jpg", fiction: true, leader: "Lisa", meeting_date: "02/01/2010")
 
-book = Book.create!(title: "Gourmet Rhapsody", author: "Muriel Barbery", image_url: "https://m.media-amazon.com/images/I/4171wj1FCNL.jpg", fiction: true, leader: "Marcie", meeting_date: "03/15/2010")
+book96 = Book.create!(title: "Gourmet Rhapsody", author: "Muriel Barbery", image_url: "https://m.media-amazon.com/images/I/4171wj1FCNL.jpg", fiction: true, leader: "Marcie", meeting_date: "03/15/2010")
 
-book = Book.create!(title: "The Elegance of the Hedgehog", author: "Muriel Barbery", image_url: "https://m.media-amazon.com/images/I/41JH5BsZaPL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "04/19/2010")
+book97 = Book.create!(title: "The Elegance of the Hedgehog", author: "Muriel Barbery", image_url: "https://m.media-amazon.com/images/I/41JH5BsZaPL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "04/19/2010")
 
-book = Book.create!(title: "Home", author: "Marilynne Robinson", image_url: "https://m.media-amazon.com/images/I/419cE5gZCpL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "05/17/2010")
+book98 = Book.create!(title: "Home", author: "Marilynne Robinson", image_url: "https://m.media-amazon.com/images/I/419cE5gZCpL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "05/17/2010")
 
-book = Book.create!(title: "Sarah's Key", author: "Tatiana de Rosnay", image_url: "https://m.media-amazon.com/images/I/51vJkmrfGaL._AC_SY780_.jpg", fiction: true, leader: "Mary Helen", meeting_date: "06/21/2010")
+book99 = Book.create!(title: "Sarah's Key", author: "Tatiana de Rosnay", image_url: "https://m.media-amazon.com/images/I/51vJkmrfGaL._AC_SY780_.jpg", fiction: true, leader: "Mary Helen", meeting_date: "06/21/2010")
 
-book = Book.create!(title: "Hotel on the Corner of Bitter and Sweet", author: "Jamie Ford", image_url: "https://m.media-amazon.com/images/I/51ne8CqLnML.jpg", fiction: true, leader: "Edna", meeting_date: "09/20/2012")
+book100 = Book.create!(title: "Hotel on the Corner of Bitter and Sweet", author: "Jamie Ford", image_url: "https://m.media-amazon.com/images/I/51ne8CqLnML.jpg", fiction: true, leader: "Edna", meeting_date: "09/20/2012")
 
-book = Book.create!(title: "To Kill a Mockingbird", author: "Harper Lee ", image_url: "https://media.glamour.com/photos/56e1f3c462b398fa64cbd304/master/w_1600%2Cc_limit/entertainment-2016-02-18-main.jpg", fiction: true, leader: "Margaret", meeting_date: "10/18/2010")
+book101 = Book.create!(title: "To Kill a Mockingbird", author: "Harper Lee ", image_url: "https://media.glamour.com/photos/56e1f3c462b398fa64cbd304/master/w_1600%2Cc_limit/entertainment-2016-02-18-main.jpg", fiction: true, leader: "Margaret", meeting_date: "10/18/2010")
 
-book = Book.create!(title: "The House of Mirth", author: "Edith Wharton", image_url: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781471152481/the-house-of-mirth-9781471152481_hr.jpg", fiction: true, leader: "Louise", meeting_date: "11/15/2010")
+book102 = Book.create!(title: "The House of Mirth", author: "Edith Wharton", image_url: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781471152481/the-house-of-mirth-9781471152481_hr.jpg", fiction: true, leader: "Louise", meeting_date: "11/15/2010")
 
-book = Book.create!(title: "A Girl Named Zippy", author: "Haven Kimmel", image_url: "https://upload.wikimedia.org/wikipedia/en/a/a5/A_Girl_Named_Zippy.jpg", fiction: true, leader: "Sue", meeting_date: "01/17/2011")
+book103 = Book.create!(title: "A Girl Named Zippy", author: "Haven Kimmel", image_url: "https://upload.wikimedia.org/wikipedia/en/a/a5/A_Girl_Named_Zippy.jpg", fiction: true, leader: "Sue", meeting_date: "01/17/2011")
 
-book = Book.create!(title: "The Help", author: "Kathryn Stockett", image_url: "https://m.media-amazon.com/images/I/41rc1NK5nIL._AC_SY780_.jpg", fiction: true, leader: "Kristin", meeting_date: "01/17/2011")
+book104 = Book.create!(title: "The Help", author: "Kathryn Stockett", image_url: "https://m.media-amazon.com/images/I/41rc1NK5nIL._AC_SY780_.jpg", fiction: true, leader: "Kristin", meeting_date: "01/17/2011")
 
-book = Book.create!(title: "Let the Great World Spin", author: "Colum McCann", image_url: "https://m.media-amazon.com/images/I/511sJ0A3irL._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "02/28/2011")
+book105 = Book.create!(title: "Let the Great World Spin", author: "Colum McCann", image_url: "https://m.media-amazon.com/images/I/511sJ0A3irL._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "02/28/2011")
 
-book = Book.create!(title: "My Reading Life", author: "Pat Conroy", image_url: "https://m.media-amazon.com/images/I/51Lz+xi4Y6L._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "04/11/2011")
+book106 = Book.create!(title: "My Reading Life", author: "Pat Conroy", image_url: "https://m.media-amazon.com/images/I/51Lz+xi4Y6L._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "04/11/2011")
 
-book = Book.create!(title: "Cutting for Stone", author: "Abraham Verghese", image_url: "https://target.scene7.com/is/image/Target/GUEST_3b30ea64-908d-4b15-874b-651fc84fa8f2?wid=488&hei=488&fmt=pjpeg", fiction: true, leader: "Mary Helen", meeting_date: "05/16/2011")
+book107 = Book.create!(title: "Cutting for Stone", author: "Abraham Verghese", image_url: "https://target.scene7.com/is/image/Target/GUEST_3b30ea64-908d-4b15-874b-651fc84fa8f2?wid=488&hei=488&fmt=pjpeg", fiction: true, leader: "Mary Helen", meeting_date: "05/16/2011")
 
-book = Book.create!(title: "A Death in the Family", author: "James Agee", image_url: "https://m.media-amazon.com/images/I/51LNmPVQPuL._AC_SY780_.jpg", fiction: true, leader: "Ann", meeting_date: "06/20/2011")
+book108 = Book.create!(title: "A Death in the Family", author: "James Agee", image_url: "https://m.media-amazon.com/images/I/51LNmPVQPuL._AC_SY780_.jpg", fiction: true, leader: "Ann", meeting_date: "06/20/2011")
 
-book = Book.create!(title: "White Noise", author: "Don Delillo", image_url: "https://m.media-amazon.com/images/I/61Rldzfu0oL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "09/19/2011")
+book109 = Book.create!(title: "White Noise", author: "Don Delillo", image_url: "https://m.media-amazon.com/images/I/61Rldzfu0oL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "09/19/2011")
 
-book = Book.create!(title: "Someone Knows my Name", author: "Lawrence Hill", image_url: "https://m.media-amazon.com/images/I/516MM9dVQ0L.jpg", fiction: true, leader: "Sue", meeting_date: "10/17/2011")
+book110 = Book.create!(title: "Someone Knows my Name", author: "Lawrence Hill", image_url: "https://m.media-amazon.com/images/I/516MM9dVQ0L.jpg", fiction: true, leader: "Sue", meeting_date: "10/17/2011")
 
-book = Book.create!(title: "Major Pettigrew’s Last Stand", author: "Helen Simonson", image_url: "https://images-na.ssl-images-amazon.com/images/I/91vrJQsMrYL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Edna", meeting_date: "11/21/2011")
+book111 = Book.create!(title: "Major Pettigrew’s Last Stand", author: "Helen Simonson", image_url: "https://images-na.ssl-images-amazon.com/images/I/91vrJQsMrYL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Edna", meeting_date: "11/21/2011")
 
-book = Book.create!(title: "The Three Weissmans of Westport", author: "Cathleen Schine", image_url: "https://images-na.ssl-images-amazon.com/images/I/81n5HDImcPL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Ann", meeting_date: "12/19/2011")
+book112 = Book.create!(title: "The Three Weissmans of Westport", author: "Cathleen Schine", image_url: "https://images-na.ssl-images-amazon.com/images/I/81n5HDImcPL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Ann", meeting_date: "12/19/2011")
 
-book = Book.create!(title: "The Water is Wide", author: "Pat Conroy", image_url: "https://m.media-amazon.com/images/I/51Sinl9BkEL.jpg", fiction: true, leader: "Nancy", meeting_date: "01/16/2012")
+book113 = Book.create!(title: "The Water is Wide", author: "Pat Conroy", image_url: "https://m.media-amazon.com/images/I/51Sinl9BkEL.jpg", fiction: true, leader: "Nancy", meeting_date: "01/16/2012")
 
-book = Book.create!(title: "Half Broke Horses", author: "Jeannette Walls", image_url: "https://upload.wikimedia.org/wikipedia/en/b/b4/Walls_Half_broke_horses.jpg", fiction: true, leader: "Lisa", meeting_date: "02/20/2012")
+book114 = Book.create!(title: "Half Broke Horses", author: "Jeannette Walls", image_url: "https://upload.wikimedia.org/wikipedia/en/b/b4/Walls_Half_broke_horses.jpg", fiction: true, leader: "Lisa", meeting_date: "02/20/2012")
 
-book = Book.create!(title: "The Madonnas of Leningrad", author: "Debra Dean", image_url: "https://m.media-amazon.com/images/I/51HVtcvdoiL._AC_SY780_.jpg", fiction: true, leader: "Mary Helen", meeting_date: "03/19/2012")
+book115 = Book.create!(title: "The Madonnas of Leningrad", author: "Debra Dean", image_url: "https://m.media-amazon.com/images/I/51HVtcvdoiL._AC_SY780_.jpg", fiction: true, leader: "Mary Helen", meeting_date: "03/19/2012")
 
-book = Book.create!(title: "A Movable Feast", author: "Ernest Hemingway", image_url: "https://upload.wikimedia.org/wikipedia/en/a/aa/MoveableFeast.jpg", fiction: true, leader: "Susan", meeting_date: "04/16/2012")
+book116 = Book.create!(title: "A Movable Feast", author: "Ernest Hemingway", image_url: "https://upload.wikimedia.org/wikipedia/en/a/aa/MoveableFeast.jpg", fiction: true, leader: "Susan", meeting_date: "04/16/2012")
 
-book = Book.create!(title: "Death Comes to Pemberley", author: "P.D. James", image_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1341917165l/13142231.jpg", fiction: true, leader: "Becky", meeting_date: "05/21/2012")
+book117 = Book.create!(title: "Death Comes to Pemberley", author: "P.D. James", image_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1341917165l/13142231.jpg", fiction: true, leader: "Becky", meeting_date: "05/21/2012")
 
-book = Book.create!(title: "Bliss, Remembered", author: "Frank Deford", image_url: "https://m.media-amazon.com/images/I/51qMxBmYcxL._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "06/18/2012")
+book118 = Book.create!(title: "Bliss, Remembered", author: "Frank Deford", image_url: "https://m.media-amazon.com/images/I/51qMxBmYcxL._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "06/18/2012")
 
-book = Book.create!(title: "Disgrace", author: "J.M. Coetzee", image_url: "https://upload.wikimedia.org/wikipedia/en/3/3d/JMCoetzee_Disgrace.jpg", fiction: true, leader: "Margaret", meeting_date: "09/10/2012")
+book119 = Book.create!(title: "Disgrace", author: "J.M. Coetzee", image_url: "https://upload.wikimedia.org/wikipedia/en/3/3d/JMCoetzee_Disgrace.jpg", fiction: true, leader: "Margaret", meeting_date: "09/10/2012")
 
-book = Book.create!(title: "The Good Thief", author: "Hannah Tinti", image_url: "https://m.media-amazon.com/images/I/5182lVEfiuL._AC_SY780_.jpg", fiction: true, leader: "Edna", meeting_date: "10/15/2012")
+book120 = Book.create!(title: "The Good Thief", author: "Hannah Tinti", image_url: "https://m.media-amazon.com/images/I/5182lVEfiuL._AC_SY780_.jpg", fiction: true, leader: "Edna", meeting_date: "10/15/2012")
 
-book = Book.create!(title: "Year of Wonders", author: "Geraldine Brooks", image_url: "https://upload.wikimedia.org/wikipedia/en/c/cb/YearofWonders.jpg", fiction: true, leader: "Sue", meeting_date: "11/19/2012")
+book121 = Book.create!(title: "Year of Wonders", author: "Geraldine Brooks", image_url: "https://upload.wikimedia.org/wikipedia/en/c/cb/YearofWonders.jpg", fiction: true, leader: "Sue", meeting_date: "11/19/2012")
 
-book = Book.create!(title: "Clybourne Park", author: "Bruce Norris", image_url: "https://m.media-amazon.com/images/I/41mB6SvTneL.jpg", fiction: true, leader: "Marcie", meeting_date: "01/21/2013")
+book122 = Book.create!(title: "Clybourne Park", author: "Bruce Norris", image_url: "https://m.media-amazon.com/images/I/41mB6SvTneL.jpg", fiction: true, leader: "Marcie", meeting_date: "01/21/2013")
 
-book = Book.create!(title: "Into the Beautiful North", author: "Luis Urrea", image_url: "https://www.arts.gov/sites/default/files/Into-the-Beautiful-North-cover.JPG", fiction: true, leader: "Mary Helen", meeting_date: "03/18/2013")
+book123 = Book.create!(title: "Into the Beautiful North", author: "Luis Urrea", image_url: "https://www.arts.gov/sites/default/files/Into-the-Beautiful-North-cover.JPG", fiction: true, leader: "Mary Helen", meeting_date: "03/18/2013")
 
-book = Book.create!(title: "The Round House", author: "Louise Erdrich", image_url: "https://m.media-amazon.com/images/I/51Kzypo8CKL.jpg", fiction: true, leader: "Linda", meeting_date: "04/15/2013")
+book124 = Book.create!(title: "The Round House", author: "Louise Erdrich", image_url: "https://m.media-amazon.com/images/I/51Kzypo8CKL.jpg", fiction: true, leader: "Linda", meeting_date: "04/15/2013")
 
-book = Book.create!(title: "The Sense of an Ending", author: "Julian Barnes", image_url: "https://m.media-amazon.com/images/I/51dwYEKjHDL.jpg", fiction: true, leader: "Ann", meeting_date: "05/20/2013")
+book125 = Book.create!(title: "The Sense of an Ending", author: "Julian Barnes", image_url: "https://m.media-amazon.com/images/I/51dwYEKjHDL.jpg", fiction: true, leader: "Ann", meeting_date: "05/20/2013")
 
-book = Book.create!(title: "Rules of Civility", author: "Amor Towles", image_url: "https://m.media-amazon.com/images/I/51DNsLcAe3L._AC_SY780_.jpg", fiction: true, leader: "Debbie D.", meeting_date: "06/17/2013")
+book126 = Book.create!(title: "Rules of Civility", author: "Amor Towles", image_url: "https://m.media-amazon.com/images/I/51DNsLcAe3L._AC_SY780_.jpg", fiction: true, leader: "Debbie D.", meeting_date: "06/17/2013")
 
-book = Book.create!(title: "The Orphan Train", author: "Christina Baker Kline", image_url: "http://prodimage.images-bn.com/pimages/9780061950728_p0_v11_s1200x630.jpg", fiction: true, leader: "Sue", meeting_date: "09/16/2013")
+book127 = Book.create!(title: "The Orphan Train", author: "Christina Baker Kline", image_url: "http://prodimage.images-bn.com/pimages/9780061950728_p0_v11_s1200x630.jpg", fiction: true, leader: "Sue", meeting_date: "09/16/2013")
 
-book = Book.create!(title: "The Chaperone", author: "Laura Moriarty", image_url: "https://m.media-amazon.com/images/I/41BLuX-9rGL._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "10/21/2013")
+book128 = Book.create!(title: "The Chaperone", author: "Laura Moriarty", image_url: "https://m.media-amazon.com/images/I/41BLuX-9rGL._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "10/21/2013")
 
-book = Book.create!(title: "The Corner Stone", author: "Julie Smutko Daugherty", image_url: "https://i.ebayimg.com/images/g/7c0AAOSw1WdjNuO~/s-l640.jpg", fiction: true, leader: "Ann", meeting_date: "11/18/2013")
+book129 = Book.create!(title: "The Corner Stone", author: "Julie Smutko Daugherty", image_url: "https://i.ebayimg.com/images/g/7c0AAOSw1WdjNuO~/s-l640.jpg", fiction: true, leader: "Ann", meeting_date: "11/18/2013")
 
-book = Book.create!(title: "Where’d You Go, Bernadette", author: "Maria Semple", image_url: "https://m.media-amazon.com/images/I/41Kht0Nw6ML._AC_SY780_.jpg", fiction: true, leader: "Jessica", meeting_date: "12/16/2013")
+book130 = Book.create!(title: "Where’d You Go, Bernadette", author: "Maria Semple", image_url: "https://m.media-amazon.com/images/I/41Kht0Nw6ML._AC_SY780_.jpg", fiction: true, leader: "Jessica", meeting_date: "12/16/2013")
 
-book = Book.create!(title: "We Are All Completely Beside Ourselves", author: "Karen Fowler", image_url: "https://m.media-amazon.com/images/I/51QvuWh-znL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "01/20/2014")
+book131 = Book.create!(title: "We Are All Completely Beside Ourselves", author: "Karen Fowler", image_url: "https://m.media-amazon.com/images/I/51QvuWh-znL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "01/20/2014")
 
-book = Book.create!(title: "The Snow Child", author: "Eowyn Ivey", image_url: "https://m.media-amazon.com/images/I/41kUPvO09VL.jpg", fiction: true, leader: "Nancy", meeting_date: "02/17/2014")
+book132 = Book.create!(title: "The Snow Child", author: "Eowyn Ivey", image_url: "https://m.media-amazon.com/images/I/41kUPvO09VL.jpg", fiction: true, leader: "Nancy", meeting_date: "02/17/2014")
 
-book = Book.create!(title: "La’s Orchestra Saves the World", author: "Alexander McCall Smith", image_url: "https://images-na.ssl-images-amazon.com/images/I/91hBzAajNXL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Margaret", meeting_date: "03/17/2014")
+book133 = Book.create!(title: "La’s Orchestra Saves the World", author: "Alexander McCall Smith", image_url: "https://images-na.ssl-images-amazon.com/images/I/91hBzAajNXL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Margaret", meeting_date: "03/17/2014")
 
-book = Book.create!(title: "Dear Life: Stories", author: "Alice Munro", image_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333579320l/13530981.jpg", fiction: true, leader: "Mary Helen", meeting_date: "04/21/2014")
+book134 = Book.create!(title: "Dear Life: Stories", author: "Alice Munro", image_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1333579320l/13530981.jpg", fiction: true, leader: "Mary Helen", meeting_date: "04/21/2014")
 
-book = Book.create!(title: "Mary Coin", author: "Marisa Silver", image_url: "https://m.media-amazon.com/images/I/51nu2EqfXRL._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "05/19/2014")
+book135 = Book.create!(title: "Mary Coin", author: "Marisa Silver", image_url: "https://m.media-amazon.com/images/I/51nu2EqfXRL._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "05/19/2014")
 
-book = Book.create!(title: "My Beloved World", author: "Sonia Sotomayor", image_url: "https://m.media-amazon.com/images/I/51laKvZ7gTL._AC_SY780_.jpg", fiction: true, leader: "Debbie", meeting_date: "06/14/2014")
+book136 = Book.create!(title: "My Beloved World", author: "Sonia Sotomayor", image_url: "https://m.media-amazon.com/images/I/51laKvZ7gTL._AC_SY780_.jpg", fiction: true, leader: "Debbie", meeting_date: "06/14/2014")
 
-book = Book.create!(title: "And the Mountains Echoed", author: "Khaled Hosseini", image_url: "https://m.media-amazon.com/images/I/51LPx-tr1hL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "09/15/2014")
+book137 = Book.create!(title: "And the Mountains Echoed", author: "Khaled Hosseini", image_url: "https://m.media-amazon.com/images/I/51LPx-tr1hL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "09/15/2014")
 
-book = Book.create!(title: "Telex from Cuba", author: "Rachel Kushner", image_url: "https://m.media-amazon.com/images/I/41rPV-AVGhL._AC_SY780_.jpg", fiction: true, leader: "Margaret", meeting_date: "10/20/2014")
+book138 = Book.create!(title: "Telex from Cuba", author: "Rachel Kushner", image_url: "https://m.media-amazon.com/images/I/41rPV-AVGhL._AC_SY780_.jpg", fiction: true, leader: "Margaret", meeting_date: "10/20/2014")
 
 book145 = Book.create!(title: "The Light Between Oceans", author: "M.L. Stedman", image_url: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451681758/the-light-between-oceans-9781451681758_hr.jpg", fiction: true, leader: "Sue", meeting_date: "11/17/2014")
 
@@ -420,3 +420,7 @@ book204 = Book.create!(title: "Gateway to the Moon", author: "Mary Morris", imag
 book205 = Book.create!(title: "The Glass Hotel", author: "Emily St. John Mandel", image_url: "https://m.media-amazon.com/images/I/51XucUUdbBL._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "05/10/2021")
 
 puts "Finished creating books."
+
+puts "Creating join table..."
+
+BookMember.create!(book_id: , member_id: member1.id)
