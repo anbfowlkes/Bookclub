@@ -421,25 +421,25 @@ book205 = Book.create!(title: "The Glass Hotel", author: "Emily St. John Mandel"
 
 book206 = Book.create!(title: "Hamnet", author: "Maggie O'Farrell", image_url: "https://s.yimg.com/ny/api/res/1.2/uOv1RX0gLn19RAUfD32o6Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MA--/https://media.zenfs.com/en/snappa_entertainment_819/d758e20634c02abe9a66c13b0b60f0a0", fiction: true, leader: "Marcie", meeting_date: "07/14/2021")
 
-book = Book.create!(title: "Circe", author: "Madeline Miller", image_url: "https://images.booksense.com/images/347/556/9780316556347.jpg", fiction: true, leader: "Sue", meeting_date: "09/29/2021")
-book = Book.create!(title: "The Last Painting of Sara De Vos", author: "Dominic Smith", image_url: "https://m.media-amazon.com/images/I/517jktfMznL.jpg", fiction: true, leader: "Lisa", meeting_date: "11/03/2021")
+book207 = Book.create!(title: "Circe", author: "Madeline Miller", image_url: "https://images.booksense.com/images/347/556/9780316556347.jpg", fiction: true, leader: "Sue", meeting_date: "09/29/2021")
 
-book = Book.create!(title: "The Personal Librarian", author: "Marie Benedict", image_url: "https://m.media-amazon.com/images/I/91OW4Gt23TS.jpg", fiction: true, leader: "Chris", meeting_date: "01/12/2022")
+book208 = Book.create!(title: "The Last Painting of Sara De Vos", author: "Dominic Smith", image_url: "https://m.media-amazon.com/images/I/517jktfMznL.jpg", fiction: true, leader: "Lisa", meeting_date: "11/03/2021")
 
-book = Book.create!(title: "The Night Watchman", author: "Louise Erdrich", image_url: "https://m.media-amazon.com/images/I/41Dt6s96fUS._AC_SY780_.jpg", fiction: true, leader: "Eleanor", meeting_date: "03/09/2022")
+book209 = Book.create!(title: "The Personal Librarian", author: "Marie Benedict", image_url: "https://m.media-amazon.com/images/I/91OW4Gt23TS.jpg", fiction: true, leader: "Chris", meeting_date: "01/12/2022")
 
-book = Book.create!(title: "Flight of Dreams", author: "Ariel Lawhon", image_url: "https://m.media-amazon.com/images/I/516h7IrOK+L._AC_SY780_.jpg", fiction: true, leader: "Nancy", meeting_date: "04/27/2022")
-book = Book.create!(title: "", author: "", image_url: "", fiction: true, leader: "", meeting_date: "")
+book210 = Book.create!(title: "The Night Watchman", author: "Louise Erdrich", image_url: "https://m.media-amazon.com/images/I/41Dt6s96fUS._AC_SY780_.jpg", fiction: true, leader: "Eleanor", meeting_date: "03/09/2022")
 
-book = Book.create!(title: "The One-in-a-Million Boy", author: "Monica Wood", image_url: "https://m.media-amazon.com/images/I/51Q3z3emk2L._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "06/01/2022")
+book211 = Book.create!(title: "Flight of Dreams", author: "Ariel Lawhon", image_url: "https://m.media-amazon.com/images/I/516h7IrOK+L._AC_SY780_.jpg", fiction: true, leader: "Nancy", meeting_date: "04/27/2022")
 
-book = Book.create!(title: "The Street Sweeper", author: "Elliot Perlman", image_url: "https://m.media-amazon.com/images/I/5182Yyr5BaL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "09/14/2022")
+book212 = Book.create!(title: "The One-in-a-Million Boy", author: "Monica Wood", image_url: "https://m.media-amazon.com/images/I/51Q3z3emk2L._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "06/01/2022")
 
-book = Book.create!(title: "Behind the Beautiful Forevers", author: "Katherine Boo", image_url: "https://m.media-amazon.com/images/I/51yZzJFTeoL._AC_SY780_.jpg", fiction: true, leader: "Eleanor", meeting_date: "11/02/2022")
+book213 = Book.create!(title: "The Street Sweeper", author: "Elliot Perlman", image_url: "https://m.media-amazon.com/images/I/5182Yyr5BaL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "09/14/2022")
 
-book = Book.create!(title: "A Hell of a Book", author: "https://m.media-amazon.com/images/I/51mZm5Zp66L._AC_SY780_.jpg", image_url: "", fiction: true, leader: "Jason Mott", meeting_date: "02/08/2023")
+book214 = Book.create!(title: "Behind the Beautiful Forevers", author: "Katherine Boo", image_url: "https://m.media-amazon.com/images/I/51yZzJFTeoL._AC_SY780_.jpg", fiction: true, leader: "Eleanor", meeting_date: "11/02/2022")
 
-book = Book.create!(title: "The Honey Bus", author: "Meredith May", image_url: "https://m.media-amazon.com/images/I/519vlL6Z5RL._AC_SY780_.jpg", fiction: true, leader: "Debbie", meeting_date: "06/21/2023")
+book215 = Book.create!(title: "A Hell of a Book", author: "https://m.media-amazon.com/images/I/51mZm5Zp66L._AC_SY780_.jpg", image_url: "", fiction: true, leader: "Jason Mott", meeting_date: "02/08/2023")
+
+book216 = Book.create!(title: "The Honey Bus", author: "Meredith May", image_url: "https://m.media-amazon.com/images/I/519vlL6Z5RL._AC_SY780_.jpg", fiction: true, leader: "Debbie", meeting_date: "06/21/2023")
 
 
 
