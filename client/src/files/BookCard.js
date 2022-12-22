@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './BookCard.css'
 import UpdateBook from './UpdateBook'
 
-let BookCard = ({getBooks,id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
+let BookCard = ({editBool,getBooks,id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
 
     let [showUpdate, setShowUpdate] = useState(false)
 
@@ -32,13 +32,17 @@ let BookCard = ({getBooks,id,title,author,imageUrl,fiction,leader,date,dateDispl
                 <p>{dateDisplayer(date)}</p>
                 {fiction ? <p>{'Fiction'}</p> : <p>{'Non-Fiction'}</p>}
             </div>
-            <div id='card-buttons'>
-                <button onClick={updateClick}>Update</button>
-                <button onClick={deleteClick}>Delete</button>
-            </div>
-            <div>
-                {showUpdate ? <UpdateBook id={id} getBooks={getBooks}/> : null}
-            </div>
+            {editBool ?
+                <>
+                    <div id='card-buttons'>
+                        <button onClick={updateClick}>Update</button>
+                        <button onClick={deleteClick}>Delete</button>
+                    </div>
+                    <div>
+                        {showUpdate ? <UpdateBook id={id} getBooks={getBooks}/> : null}
+                    </div>
+                </>
+             : null}
         </div>
     )
 }

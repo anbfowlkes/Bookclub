@@ -10,9 +10,9 @@ let AddBook = ( {getBooks} ) => {
         let genre = e.target[5].value
         let genreBool
         if (genre === 'Fiction') {
-            genreBool = true
+            genreBool = 'true'
         } else if (genre === 'Non-Fiction') {
-            genreBool = false
+            genreBool = 'false'
         }
         if (genre === 'Select Genre') {
             return
@@ -20,7 +20,7 @@ let AddBook = ( {getBooks} ) => {
         console.log(genreBool)
         let req = await fetch('http://localhost:3000/books', {
             method: 'POST',
-            headers: {'Content-type': 'application/json'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 title: title,
                 author: author,
@@ -30,6 +30,7 @@ let AddBook = ( {getBooks} ) => {
                 fiction: genreBool
             })
         })
+        getBooks()
         let res = await req.json()
         console.log(res)
         getBooks()
