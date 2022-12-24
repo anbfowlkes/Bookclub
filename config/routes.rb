@@ -14,4 +14,8 @@ Rails.application.routes.draw do
 
   get '/members', to: 'members#home'
 
+
+
+  get '/members/favorites', to: 'member_books#index'
+
 end
