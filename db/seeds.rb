@@ -409,7 +409,7 @@ book199 = Book.create!(title: "Americanah", author: "Chimamanda Ngozi Adichie", 
 
 book200 = Book.create!(title: "Beautiful Ruins", author: "Jess Walter", image_url: "https://m.media-amazon.com/images/I/51kzcyubVNL._AC_SY780_.jpg", fiction: true, leader: "Lisa", meeting_date: "11/02/2020")
 
-book201 = Book.create!(title: "The Book of Troublesome Creek", author: "Kim Richardson", image_url: "https://m.media-amazon.com/images/I/51C-99vYGWL.jpg", fiction: true, leader: "Margaret", meeting_date: "12/07/2020")
+book201 = Book.create!(title: "The Book Woman of Troublesome Creek", author: "Kim Richardson", image_url: "https://m.media-amazon.com/images/I/51C-99vYGWL.jpg", fiction: true, leader: "Margaret", meeting_date: "12/07/2020")
 
 book202 = Book.create!(title: "This Tender Land", author: "William Kent", image_url: "https://m.media-amazon.com/images/I/513OSNmyDJL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "01/11/2021")
 
@@ -448,6 +448,7 @@ puts "Finished creating books."
 
 puts "Creating join table..."
 
+# # Sue's Favorites:
 BookMember.create!(book_id: book6.id, member_id: member1.id)
 BookMember.create!(book_id: book8.id, member_id: member1.id)
 BookMember.create!(book_id: book9.id, member_id: member1.id)
@@ -492,5 +493,46 @@ BookMember.create!(book_id: book184.id, member_id: member1.id)
 BookMember.create!(book_id: book188.id, member_id: member1.id)
 BookMember.create!(book_id: book189.id, member_id: member1.id)
 BookMember.create!(book_id: book200.id, member_id: member1.id)
-BookMember.create!(book_id: book.id, member_id: member1.id)
-BookMember.create!(book_id: book.id, member_id: member1.id)
+BookMember.create!(book_id: book206.id, member_id: member1.id)
+BookMember.create!(book_id: book210.id, member_id: member1.id)
+BookMember.create!(book_id: book213.id, member_id: member1.id)
+
+# # Marcie's Favorites:
+BookMember.create!(book_id: book1.id, member_id: member8.id)
+BookMember.create!(book_id: book39.id, member_id: member8.id)
+BookMember.create!(book_id: book177.id, member_id: member8.id)
+BookMember.create!(book_id: book192.id, member_id: member8.id)
+BookMember.create!(book_id: book201.id, member_id: member8.id)
+BookMember.create!(book_id: book207.id, member_id: member8.id)
+
+# # Nancy's Favorites:
+BookMember.create!(book_id: book205.id, member_id: member9.id)
+BookMember.create!(book_id: book209.id, member_id: member9.id)
+BookMember.create!(book_id: book211.id, member_id: member9.id)
+BookMember.create!(book_id: book214.id, member_id: member9.id)
+
+# # Linda's Favorites:
+BookMember.create!(book_id: book97.id, member_id: member5.id)
+BookMember.create!(book_id: book67.id, member_id: member5.id)
+BookMember.create!(book_id: book78.id, member_id: member5.id)
+BookMember.create!(book_id: book81.id, member_id: member5.id)
+BookMember.create!(book_id: book107.id, member_id: member5.id)
+BookMember.create!(book_id: book192.id, member_id: member5.id)
+BookMember.create!(book_id: book193.id, member_id: member5.id)
+
+# # Lisa's Favorites
+BookMember.create!(book_id: book11.id, member_id: member7.id)
+BookMember.create!(book_id: book47.id, member_id: member7.id)
+BookMember.create!(book_id: book76.id, member_id: member7.id)
+BookMember.create!(book_id: book101.id, member_id: member7.id)
+BookMember.create!(book_id: book102.id, member_id: member7.id)
+BookMember.create!(book_id: book105.id, member_id: member7.id)
+BookMember.create!(book_id: book107.id, member_id: member7.id)
+BookMember.create!(book_id: book118.id, member_id: member7.id)
+BookMember.create!(book_id: book126.id, member_id: member7.id)
+BookMember.create!(book_id: book169.id, member_id: member7.id)
+BookMember.create!(book_id: book172.id, member_id: member7.id)
+BookMember.create!(book_id: book184.id, member_id: member7.id)
+BookMember.create!(book_id: book186.id, member_id: member7.id)
+BookMember.create!(book_id: book192.id, member_id: member7.id)
+BookMember.create!(book_id: book206.id, member_id: member7.id)

@@ -1,4 +1,4 @@
 class BookMember < ApplicationRecord
-    belongs_to :contact
-    belongs_to :deal
+    belongs_to :member
+    belongs_to :book
 end
