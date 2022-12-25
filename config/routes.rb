@@ -18,4 +18,8 @@ Rails.application.routes.draw do
 
   get '/members/favorites', to: 'member_books#index'
 
+  get 'members/:id/favorites', to: 'member_books#show'
+
+  post '/members/favorites', to: 'member_books#create'
+
 end

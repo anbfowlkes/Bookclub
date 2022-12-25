@@ -113,8 +113,6 @@ let Books = () => {
 
     let handleFavorites = (e) => {
         console.log('hi')
-        let memberName = e.target.value
-        let data
         if (e.target.value === 'All') {
             setBooksShown(booksArray)
             return

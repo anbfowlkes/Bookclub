@@ -16,3 +16,9 @@
 #member-card-image {
     width: 100px;
 }
+
+#member-div {
+    display: flex;
+    flex-direction: row;
+    
+}

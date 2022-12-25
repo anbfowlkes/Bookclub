@@ -7,11 +7,10 @@ import HomePage from './files/HomePage'
 import Members from './files/Members'
 
 let App = () => {
+
   return (
     <div>
-      {/* <Books /> */}
-
-      {/* <BrowserRouter></BrowserRouter> */}
+      
 
       <BrowserRouter>
         <Navbar />
