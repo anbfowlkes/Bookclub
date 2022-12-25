@@ -8,7 +8,10 @@ let Books = () => {
 
     let c = 0
     let [booksArray, setBooksArray] = useState([])
+    let [favoritesData, setFavoritesData] = useState([])
+    let [membersArray, setMembersArray] = useState([])
     let [newBookBool, setNewBookBool] = useState(false)
+    let [booksShown, setBooksShown] = useState([])
 
     let getBooks = async () => {
         let req = await fetch('http://localhost:3000/books')
@@ -18,10 +21,25 @@ let Books = () => {
             return a.title < b.title ? -1 : 1
         })
         setBooksArray(res)
+        setBooksShown(res)
+    }
+
+    let getFavorites = async () => {
+        let req = await fetch('http://localhost:3000/members/favorites')
+        let res = await req.json()
+        setFavoritesData(res)
+    }
+
+    let getMembers = async () => {
+        let req = await fetch('http://localhost:3000/members')
+        let res = await req.json()
+        setMembersArray(res)
     }
 
     useEffect(() => {
         getBooks()
+        getFavorites()
+        getMembers()
     },[])
 
     let dateDisplayer = (date) => {
@@ -93,6 +111,23 @@ let Books = () => {
         console.log('still running')
     }
 
+    let handleFavorites = (e) => {
+        console.log('hi')
+        let memberName = e.target.value
+        let data
+        if (e.target.value === 'All') {
+            setBooksShown(booksArray)
+            return
+        }
+        favoritesData.forEach((item) => {
+            if (item.name === e.target.value) {
+                setBooksShown(item.books)
+                return
+            }
+        })
+        // setBooksShown()
+    }
+
 
     return(
         <>
@@ -117,8 +152,23 @@ let Books = () => {
                     <input type='submit' />
                 </form>
             </div>
+            <div>
+                <form>
+                    <select onChange = {(e) => handleFavorites(e)}>
+                        <option>Favorited By:</option>
+                        <option>All</option>
+                        {favoritesData.map((item) => {
+                            if (item.books.length > 0) {
+                                return <option>{item.name}</option>
+                            } else {
+                                return
+                            }
+                        })}
+                    </select>
+                </form>
+            </div>
             <div id='past-books'>
-                {booksArray.map((book) => {
+                {booksShown.map((book) => {
                     return(
                         <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
                         )
