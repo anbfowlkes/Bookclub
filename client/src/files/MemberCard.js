@@ -1,11 +1,12 @@
 import './MemberCard.css'
+// import { useState } from 'react'
 
-let MemberCard = ( {getFavorites, memberId, booksArray, favoritesData, editBool, name, image, active} ) => {
+let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray, favoritesData, editBool, name, image, active} ) => {
 
     let addFavorite = async (e) => {
         e.preventDefault()
         console.log(e.target[0].value)
-        let req = await fetch('http://localhost:3000//members/favorites', {
+        let req = await fetch('http://localhost:3000/members/favorites', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -28,7 +29,15 @@ let MemberCard = ( {getFavorites, memberId, booksArray, favoritesData, editBool,
         })
         getFavorites()
     }
-
+    
+    let handleDelete = async (e) => {
+        console.log(e.target.value)
+        console.log(memberId)
+        let req = await fetch(`http://localhost:3000/members/${memberId}/`, {method: 'DELETE'})
+        let res = await req.json()
+        console.log(res)
+        getMembers()
+    }
     // console.log('favorites data: ', favoritesData)
 
     return(
@@ -40,6 +49,14 @@ let MemberCard = ( {getFavorites, memberId, booksArray, favoritesData, editBool,
                 <p>{name}</p>
                 {active ? <p>{'Active'}</p> : <p>{'Not Active'}</p>}
             </div>
+            {editBool ? 
+            <>
+                <button>Edit Member</button>
+                {showDeletes ? 
+                <button onClick={(e) => handleDelete(e)}>Delete Member</button>
+                : null}
+            </>
+            : null}
             {editBool ? 
             <>
                 <form onSubmit={(e) => removeFavorite(e)}>Remove a favorite:

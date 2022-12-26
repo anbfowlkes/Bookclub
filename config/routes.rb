@@ -14,6 +14,12 @@ Rails.application.routes.draw do
 
   get '/members', to: 'members#home'
 
+  get '/members/:id', to: 'members#show'
+
+  delete '/members/:id', to: 'members#destroy'
+
+  post '/members', to: 'members#create'
+
 
 
   get '/members/favorites', to: 'member_books#index'

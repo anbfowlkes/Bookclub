@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import MemberCard from './MemberCard'
+import AddMember from './AddMember'
 
 let Members = () => {
 
     let [membersArray, setMembersArray] = useState([])
     let [booksArray, setBooksArray] = useState([])
     let [editBool, setEditBool] = useState(false)
+    let [showDeletes, setShowDeletes] = useState(false)
+    let [newMemberBool, setNewMemberBool] = useState(false)
+
 
     let getMembers = async () => {
         let req = await fetch('http://localhost:3000/members')
@@ -56,8 +60,21 @@ let Members = () => {
                 <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
             </div>
             <div>
+                {editBool ? 
+                <button onClick={() => setNewMemberBool(prev => !prev)}>Add a Member</button>
+                : null}
+            </div>
+            <div>
+                {newMemberBool ? <AddMember getMembers={getMembers} /> : null}
+            </div>
+            <div>
+                {editBool ?
+                    <button onClick={() => setShowDeletes(prev => !prev)}>Show Deletes</button>
+                    : null}
+            </div>
+            <div>
                 {membersArray.map((member) => {
-                    return <MemberCard getFavorites={getFavorites} memberId={member.id} booksArray={booksArray} favoritesData={favoritesData} editBool={editBool} key={c++} name={member.name} image={member.image} active={member.active} />
+                    return <MemberCard showDeletes={showDeletes} getMembers={getMembers} getFavorites={getFavorites} memberId={member.id} booksArray={booksArray} favoritesData={favoritesData} editBool={editBool} key={c++} name={member.name} image={member.image} active={member.active} />
                 })}
             </div>
         </>

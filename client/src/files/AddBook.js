@@ -30,7 +30,6 @@ let AddBook = ( {getBooks} ) => {
                 fiction: genreBool
             })
         })
-        getBooks()
         let res = await req.json()
         console.log(res)
         getBooks()
