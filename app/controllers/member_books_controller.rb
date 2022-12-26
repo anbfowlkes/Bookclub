@@ -10,6 +10,11 @@ class MemberBooksController < ApplicationController
     # end
 
 
+
+    def new_function
+        render json: Member.all, each_serializer: FavoriteSerializer
+    end
+
     def index
         render json: Member.all, each_serializer: FavoriteSerializer
     end

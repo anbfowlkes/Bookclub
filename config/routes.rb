@@ -29,8 +29,10 @@ Rails.application.routes.draw do
 
   get 'members/:id/favorites', to: 'member_books#show'
 
-  # post '/members/favorites', to: 'member_books#create'
+  post '/members/favorites', to: 'member_books#create'
 
-  # delete '/members/favorites', to: 'member_books#destroy'
+  delete '/members/favorites', to: 'member_books#destroy'
+
+  get '/myroute', to: 'member_books#new_function'
 
 end

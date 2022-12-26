@@ -25,7 +25,7 @@ let Books = () => {
     }
 
     let getFavorites = async () => {
-        let req = await fetch('http://localhost:3000/members/favorites')
+        let req = await fetch('http://localhost:3000/myroute')
         let res = await req.json()
         setFavoritesData(res)
     }
