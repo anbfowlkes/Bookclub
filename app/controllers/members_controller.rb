@@ -19,6 +19,15 @@ class MembersController < ApplicationController
         end
     end
 
+    def update
+        member = Member.find_by(id: params[:id])
+        if member.update(member_params)
+            render json: member
+        else
+            render json: {error: member.errors.full_messages}, status: 422
+        end
+    end
+
     def create
         member = Member.create!(member_params)
     end

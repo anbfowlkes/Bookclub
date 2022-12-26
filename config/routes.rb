@@ -20,14 +20,17 @@ Rails.application.routes.draw do
 
   post '/members', to: 'members#create'
 
+  patch '/members/:id', to: 'members#update'
 
 
-  get '/members/favorites', to: 'member_books#index'
+
+  get '/members/favourites', to: 'member_books#home'
+  # get '/members/favorites', to: 'books#home'
 
   get 'members/:id/favorites', to: 'member_books#show'
 
-  post '/members/favorites', to: 'member_books#create'
+  # post '/members/favorites', to: 'member_books#create'
 
-  delete '/members/favorites', to: 'member_books#destroy'
+  # delete '/members/favorites', to: 'member_books#destroy'
 
 end

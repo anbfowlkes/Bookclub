@@ -15,9 +15,9 @@ let Members = () => {
         let req = await fetch('http://localhost:3000/members')
         let res = await req.json()
         console.log(res)
-        // res = res.sort((a, b) => {
-        //     return a.title < b.title ? -1 : 1
-        // })
+        res = res.sort((a, b) => {
+            return a.name < b.name ? -1 : 1
+        })
         setMembersArray(res)
     }
 

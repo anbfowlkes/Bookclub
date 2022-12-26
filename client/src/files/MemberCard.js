@@ -1,7 +1,11 @@
+import { useState } from 'react'
 import './MemberCard.css'
 // import { useState } from 'react'
+import UpdateMember from './UpdateMember'
 
 let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray, favoritesData, editBool, name, image, active} ) => {
+
+    let [myBool, setMyBool] = useState(false)
 
     let addFavorite = async (e) => {
         e.preventDefault()
@@ -51,7 +55,8 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
             </div>
             {editBool ? 
             <>
-                <button>Edit Member</button>
+                <button onClick={() => setMyBool(prev => !prev)}>Edit Member</button>
+                    {myBool ? <UpdateMember id={memberId} getMembers={getMembers} /> : null }
                 {showDeletes ? 
                 <button onClick={(e) => handleDelete(e)}>Delete Member</button>
                 : null}
