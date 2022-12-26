@@ -16,6 +16,21 @@ let MemberCard = ( {getFavorites, memberId, booksArray, favoritesData, editBool,
         getFavorites()
     }
 
+    let removeFavorite = async (e) => {
+        e.preventDefault()
+        let req = await fetch('http://localhost:3000//members/favorites', {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                member_id: memberId,
+                book_id: e.target[0].value,
+            })
+        })
+        getFavorites()
+    }
+
+    // console.log('favorites data: ', favoritesData)
+
     return(
         <div id='member-div'>
             <div>
@@ -27,15 +42,18 @@ let MemberCard = ( {getFavorites, memberId, booksArray, favoritesData, editBool,
             </div>
             {editBool ? 
             <>
-                <select>
-                    {favoritesData.map((item) => {
-                        if (item.name === name) {
-                            return item.books.map((book) => {
-                                return <option>{book.title}</option>
-                            })
-                        }
-                    })}
-                </select>
+                <form onSubmit={(e) => removeFavorite(e)}>Remove a favorite:
+                    <select>
+                        {favoritesData.map((item) => {
+                            if (item.name === name) {
+                                return item.books.map((book) => {
+                                    return <option value={book.id}>{book.title}</option>
+                                })
+                            }
+                        })}
+                    </select>
+                    <input type='submit'></input>
+                </form>
                 <form onSubmit={(e) => addFavorite(e)}> Add a Favorite:
                     <select>
                         {booksArray.map((book) => {

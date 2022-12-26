@@ -22,4 +22,6 @@ Rails.application.routes.draw do
 
   post '/members/favorites', to: 'member_books#create'
 
+  delete '/members/favorites', to: 'member_books#destroy'
+
 end

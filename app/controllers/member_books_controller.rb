@@ -21,7 +21,17 @@ class MemberBooksController < ApplicationController
 
     def create
         connection = BookMember.create!(member_book_params)
-    end     
+    end
+
+    def destroy
+        fav = BookMember.find_by(member_id: params[:member_id], book_id: params[:book_id])
+        if fav.destroy
+            render json: book
+        else
+            render json: {error: BookMember.errors.full_messages}, status: 422
+            # render json: {}
+        end
+    end
 
 
     private
