@@ -35,4 +35,10 @@ Rails.application.routes.draw do
 
   get '/myroute', to: 'member_books#new_function'
 
+
+
+  # Pictures:
+
+  get '/pictures', to: 'pictures#index'
+
 end

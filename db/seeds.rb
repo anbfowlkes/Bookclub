@@ -6,11 +6,22 @@ BookMember.destroy_all
 Picture.destroy_all
 
 puts "Creating Pictures..."
-Picture.create!(image_url: 'https://i.imgur.com/vRMjVRk.jpg', year: 2004)
-Picture.create!(image_url: 'https://i.imgur.com/yhq2XrP.jpg', year: 2010)
-Picture.create!(image_url: 'https://i.imgur.com/17mylni.jpg', year: 2017)
-Picture.create!(image_url: 'https://i.imgur.com/3EMXmpL.png', year: 2020)
-Picture.create!(image_url: 'https://i.imgur.com/mVtEZ0S.jpg', year: 2021)
+Picture.create!(image_url: 'https://i.imgur.com/vRMjVRk.jpg', year: 2004, description: 'Back row (L-R): Anne Baughman, Mary Helen Dolan, Ann Dillon,
+Front row (L-R): Edna Shafer, Marcie Ver Ploeg, Martha Kelly, Susan Baruch, Margaret Beck
+Photograph by Don Ver Ploeg')
+
+Picture.create!(image_url: 'https://i.imgur.com/49lYnLj.jpg', year: 2007, description: 'Back row (L-R): Mary Helen Dolan, Susan Baruch, Debbie Cerrone, Edna Shafer, Marcie Ver Ploeg,
+Front row (L-R): Margaret Beck, Ann Dillon, Nancy Warren-Oliver, Louise Beetz
+Photograph by Don Ver Ploeg')
+Picture.create!(image_url: 'https://i.imgur.com/yhq2XrP.jpg', year: 2010, description: 'L-R: Nancy Warren-Oliver, Marcie Ver Ploeg, Susan Baruch, Ann Dillon, Mary Helen Dolan, Lisa Tiets, Edna Shafer, Margaret Beck, Debbie Cerrone, Karin Stuart, Louise Beetz
+Photograph by Bill Fowlkes')
+Picture.create!(image_url: 'https://i.imgur.com/17mylni.jpg', year: 2017, description: 'Back row (L-R): Louise Beetz, Lizzie Roth, Susan Baruch, Mary Helen Dolan,
+Middle row: Eleanor Newton, Nancy Warren-Oliver, Debbie Doyle, Lisa Tietz, Ann Dillon,
+Floor row: Marjorie Relin, Marcie Ver Ploeg
+Photograph by Don Ver Ploeg')
+Picture.create!(image_url: 'https://i.imgur.com/3EMXmpL.png', year: 2020, description: '')
+Picture.create!(image_url: 'https://i.imgur.com/mVtEZ0S.jpg', year: 2021, description: 'L-R: Nancy Warren-Oliver, Chris Carey, Marcie Ver Ploeg, Susan Baruch, Lisa Tietz, Mary Helen Dolan
+Photograph by Bill Fowlkes')
 
 
 puts "Creating members..."
