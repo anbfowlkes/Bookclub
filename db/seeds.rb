@@ -19,7 +19,7 @@ Picture.create!(image_url: 'https://i.imgur.com/17mylni.jpg', year: 2017, descri
 Middle row: Eleanor Newton, Nancy Warren-Oliver, Debbie Doyle, Lisa Tietz, Ann Dillon,
 Floor row: Marjorie Relin, Marcie Ver Ploeg
 Photograph by Don Ver Ploeg')
-Picture.create!(image_url: 'https://i.imgur.com/3EMXmpL.png', year: 2020, description: '')
+Picture.create!(image_url: 'https://i.imgur.com/3EMXmpL.png', year: 2020, description: 'We gathered virtually during the pandemic.')
 Picture.create!(image_url: 'https://i.imgur.com/mVtEZ0S.jpg', year: 2021, description: 'L-R: Nancy Warren-Oliver, Chris Carey, Marcie Ver Ploeg, Susan Baruch, Lisa Tietz, Mary Helen Dolan
 Photograph by Bill Fowlkes')
 

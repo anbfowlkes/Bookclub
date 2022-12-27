@@ -19,8 +19,12 @@ let HomePage = () => {
 // fall image here
     return(
         <div id='home-page'>
-            <h1 id='home-header'>Our Gladbook Club</h1>
-            <PictureDisplay pictureData={pictureData} />
+            <div>
+                <h1 id='home-header'>Our Gladbook Club</h1>
+            </div>
+            <div>
+                <PictureDisplay pictureData={pictureData} />
+            </div>
         </div>
     )
 }

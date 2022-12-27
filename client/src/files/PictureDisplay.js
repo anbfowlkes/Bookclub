@@ -34,11 +34,15 @@ let PictureDisplay = ( {pictureData} ) => {
 
     return(
         <div id='slideshow-div'>
-            <img className='slide-image' src={`${imgUrl}`} />
-            <p className='desc' style={{color: 'white'}}>{picDesc}</p>
-            <div>
-                <button onClick={prevImg}>Previous</button>
-                <button onClick={nextImg}>Next</button>
+            <div id='pic-container'>
+                <img className='slide-image' src={`${imgUrl}`} />
+            </div>
+            <div id='info'>
+                <p className='desc'>{picDesc}</p>
+                <div id='buttons'>
+                    <button className='pin' onClick={prevImg}>Previous</button>
+                    <button className='pin' onClick={nextImg}>Next</button>
+                </div>
             </div>
         </div>
     )
