@@ -28,10 +28,10 @@ class MemberBooksController < ApplicationController
         connection = BookMember.create!(member_book_params)
     end
 
-    def destroy
+    def getridof
         fav = BookMember.find_by(member_id: params[:member_id], book_id: params[:book_id])
         if fav.destroy
-            render json: book
+            render json: fav
         else
             render json: {error: BookMember.errors.full_messages}, status: 422
             # render json: {}

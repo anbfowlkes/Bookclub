@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_20_193545) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_27_072002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "backgrounds", force: :cascade do |t|
+    t.string "image_url"
+    t.string "season"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "book_members", force: :cascade do |t|
     t.integer "book_id"
@@ -36,6 +43,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_20_193545) do
     t.string "name"
     t.string "image"
     t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string "image_url"
+    t.integer "year"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

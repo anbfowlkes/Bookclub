@@ -3,6 +3,15 @@ puts "Destroying past data"
 Book.destroy_all
 Member.destroy_all
 BookMember.destroy_all
+Picture.destroy_all
+
+puts "Creating Pictures..."
+Picture.create!(image_url: 'https://i.imgur.com/vRMjVRk.jpg', year: 2004)
+Picture.create!(image_url: 'https://i.imgur.com/yhq2XrP.jpg', year: 2010)
+Picture.create!(image_url: 'https://i.imgur.com/17mylni.jpg', year: 2017)
+Picture.create!(image_url: 'https://i.imgur.com/3EMXmpL.png', year: 2020)
+Picture.create!(image_url: 'https://i.imgur.com/mVtEZ0S.jpg', year: 2021)
+
 
 puts "Creating members..."
 

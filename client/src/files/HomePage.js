@@ -1,7 +1,12 @@
-let HomePage = () => {
+import './HomePage.css'
 
+let HomePage = () => {
+// fall image here
     return(
-        <h1>Book Club Home Page</h1>
+        <div id='home-page'>
+            <h1 id='home-header'>Book Club Home Page</h1>
+            {/* <img src='https://assets.puzzlefactory.com/puzzle/450/520/original.jpg' /> */}
+        </div>
     )
 }
 

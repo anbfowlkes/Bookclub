@@ -23,7 +23,7 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
 
     let removeFavorite = async (e) => {
         e.preventDefault()
-        let req = await fetch('http://localhost:3000/members/favorites', {
+        let req = await fetch('http://localhost:3000/deletefavorite', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
