@@ -4,23 +4,23 @@ import './Navbar.css'
 let Navbar = ( {background,setBackground} ) => {
     return(
         <div id='navbar'>
-                <div onClick={() => setBackground(0)} className='nav-item'>
-                    <li>
+                <div className='nav-item'>
+                    <li onClick={() => setBackground(0)}>
                         <Link to="/">Home</Link>
                     </li>
                 </div>
-                <div onClick={() => setBackground(1)}  className='nav-item'>
-                    <li>
+                <div  className='nav-item'>
+                    <li onClick={() => setBackground(1)}>
                         <Link to="/futurebooks">Future Books</Link>
                     </li>
                 </div>
-                <div onClick={() => setBackground(2)} className='nav-item'>
-                    <li>
+                <div className='nav-item'>
+                    <li onClick={() => setBackground(2)}>
                         <Link to="/books">Past Books</Link>
                     </li>
                 </div>
-                <div onClick={() => setBackground(3)} className='nav-item'>
-                    <li>
+                <div className='nav-item'>
+                    <li onClick={() => setBackground(3)} >
                         <Link to="/members">Members</Link>
                     </li>
                 </div>

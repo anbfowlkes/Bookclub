@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import BookCard from './BookCard.js'
 import AddBook from './AddBook.js'
+import './Books.css'
 
 let Books = () => {
 // winter
@@ -128,7 +129,7 @@ let Books = () => {
 
 
     return(
-        <>
+        <div id='past-books-container'>
             <div>
                 <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
             </div>
@@ -172,7 +173,7 @@ let Books = () => {
                         )
                     })}
             </div>
-        </>
+        </div>
     )
 }
 

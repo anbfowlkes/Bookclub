@@ -22,15 +22,15 @@ let BookCard = ({editBool,getBooks,id,title,author,imageUrl,fiction,leader,date,
 
     return(
         <div id='book-card'>
+            <div id='book-info'>
+                <h4>{title}</h4>
+                <p>By {author}</p>
+                {fiction ? <p>{'Fiction'}</p> : <p>{'Non-Fiction'}</p>}
+                <p>Presenter: {leader}</p>
+                <p>Mtg. Date: {dateDisplayer(date)}</p>
+            </div>
             <div>
                 <img id='book-card-image' src={imageUrl} />
-            </div>
-            <div id='book-info'>
-                <p>{title}</p>
-                <p>{author}</p>
-                <p>{leader}</p>
-                <p>{dateDisplayer(date)}</p>
-                {fiction ? <p>{'Fiction'}</p> : <p>{'Non-Fiction'}</p>}
             </div>
             {editBool ?
                 <>

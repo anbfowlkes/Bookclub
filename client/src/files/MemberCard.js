@@ -46,12 +46,14 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
 
     return(
         <div id='member-div'>
-            <div>
-                <img id='member-card-image' src={image} />
-            </div>
-            <div id='member-info'>
-                <p>{name}</p>
-                {active ? <p>{'Active'}</p> : <p>{'Not Active'}</p>}
+            <div id='pic-and-info'>
+                <div>
+                    <img id='member-card-image' src={image} />
+                </div>
+                <div id='member-info'>
+                    <p>{name}</p>
+                    {/* {active ? <p>{'Active'}</p> : <p>{'Not Active'}</p>} */}
+                </div>
             </div>
             {editBool ? 
             <>

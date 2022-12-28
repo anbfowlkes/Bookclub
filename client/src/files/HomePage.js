@@ -25,6 +25,17 @@ let HomePage = () => {
             <div>
                 <PictureDisplay pictureData={pictureData} />
             </div>
+            <div id='blurb'>
+                <p>{'The “Gladbook Club” (so named because it originated as a neighborhood club on Gladbrook Road in Pittsford, NY) held its first meeting in September of 2000. The group was created by Guttenberg Book Store owner, Martha Kelly (of blessed memory) and Susan Baruch - who still runs it to this day.'}</p> 
+                <p>{'Early ground rules (set by Martha with tongue in cheek) included: “Mosquito discussion, while inevitable, should not occupy the entire evening” and “Excessive house cleaning is forbidden.” (See the original note below.)'}</p><p>{'Over the past 20+ years, the Gladbook Club has read over 200 books and welcomed 35+ women into its fold, with about 10 active members at any one time. Favorite books have included: The Red Tent, A Walk in the Woods, A Fine Balance, Let the Great World Spin, A Gentleman in Moscow, and Second Suns.'}</p>
+            </div>
+            <div id='letter'>
+                <h2>Our Humble Beginnings:</h2>
+                <img src='https://i.imgur.com/LDOQIbz.png' />
+            </div>
+            <div id='edit-button'>
+                <button>Edit Page</button>
+            </div>
         </div>
     )
 }

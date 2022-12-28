@@ -7,6 +7,13 @@
 #book-info {
     display: flex;
     flex-direction: column;
+    /* margin-left: 4em; */
+    width: 12em;
+    /* background: linear-gradient(90deg, rgb(255, 255, 255) 60%, rgb(156, 153, 156)); */
+    background: linear-gradient(90deg,
+                rgb(255, 255, 255), 40%,
+                rgb(156, 153, 156))
+                /* rgb(68, 67, 67),40%) */
 }
 
 #book-info p {
@@ -14,7 +21,7 @@
 }
 
 #book-card-image {
-    width: 100px;
+    width: 12em;
 }
 
 #card-buttons {

@@ -1,0 +1,25 @@
+#past-books-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#past-books {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4em;
+    text-align: center;
+    /* background: linear-gradient(90deg, rgb(182, 255, 255), rgb(88, 175, 236)) */
+}
+
+/* #past-books > h4 {
+    margin-left: 2em;
+}
+
+#past-books > p {
+    margin-left: 2em;
+} */

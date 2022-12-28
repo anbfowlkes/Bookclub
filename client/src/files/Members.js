@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import MemberCard from './MemberCard'
 import AddMember from './AddMember'
+import './MemberCard.css'
 
 let Members = () => {
 
@@ -72,10 +73,16 @@ let Members = () => {
                     <button onClick={() => setShowDeletes(prev => !prev)}>Show Deletes</button>
                     : null}
             </div>
-            <div>
+            <div id='act-mem'>
+                <h2>Active Members</h2>
+            </div>
+            <div id='member-map'>
                 {membersArray.map((member) => {
                     return <MemberCard showDeletes={showDeletes} getMembers={getMembers} getFavorites={getFavorites} memberId={member.id} booksArray={booksArray} favoritesData={favoritesData} editBool={editBool} key={c++} name={member.name} image={member.image} active={member.active} />
                 })}
+            </div>
+            <div id='mem-mem'>
+                <h2>In Memorium:</h2>
             </div>
         </>
     )

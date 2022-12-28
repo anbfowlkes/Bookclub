@@ -59,3 +59,14 @@
   min-width: 100%;
   min-height: 100%;
 }
+
+.bge {
+  position: fixed;
+  top: 0em;
+  left: 0;
+  z-index: -1;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}

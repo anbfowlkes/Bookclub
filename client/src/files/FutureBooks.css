@@ -1,0 +1,24 @@
+#futures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+
+#next-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid black; */
+    width: 45em;
+    margin-bottom: 5em;
+    background: linear-gradient(90deg, rgb(208, 251, 251), rgb(193, 217, 234));
+    border-radius: 2em;
+}
+
+#next-book > h2 {
+    font-size: 3em;
+}
