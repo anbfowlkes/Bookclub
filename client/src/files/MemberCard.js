@@ -47,8 +47,8 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
     return(
         <div id='member-div'>
             <div id='pic-and-info'>
-                <div>
-                    <img id='member-card-image' src={image} />
+                <div id='member-img'>
+                    {image === "" ? <div><p>No Image Shown</p></div> : <img id='member-card-image' src={image} />}
                 </div>
                 <div id='member-info'>
                     <p>{name}</p>

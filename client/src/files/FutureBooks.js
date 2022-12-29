@@ -9,6 +9,7 @@ let FutureBooks = () => {
     let [restOfBooks, setRestOfBooks] = useState([])
     let [nextBook, setNextBook] = useState(null)
     let [futureBooks, setFutureBooks] = useState([])
+    let [bookIdeas, setBookIdeas] = useState([])
 
     let getBooks = async () => {
         let req = await fetch('http://localhost:3000/books')
@@ -31,10 +32,14 @@ let FutureBooks = () => {
             console.log('second')
         }
         let myArray = []
+        let ideaArray = []
         res.forEach((item) => {
             let meet = new Date(item.meeting_date)
             if (meet > x) {
                 myArray.push(item)
+            }
+            if (item.leader === "TBD") {
+                ideaArray.push(item)
             }
         })
         console.log(myArray)
@@ -57,6 +62,7 @@ let FutureBooks = () => {
         myArray.shift()
         console.log('rest: ', myArray)
         setRestOfBooks(myArray)
+        setBookIdeas(ideaArray)
     }
     
     useEffect(() => {
@@ -102,7 +108,7 @@ let FutureBooks = () => {
         if (monthNum === 12) {
             month = "Dec"
         }
-        return month + ", " + date[6] + date[7] + date[8] + date[9]
+        return month + ". " + date[6] + date[7] + date[8] + date[9]
     }
 
     let c = 0
@@ -122,11 +128,19 @@ let FutureBooks = () => {
                     return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
                 })}
             </div>
-            <div>
-                <h2>Other Upcoming Books:</h2>
+            <div id='upcoming-books'>
+                <h2>Upcoming Books:</h2>
                 {restOfBooks.map((book) => {
                     return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
                 })}
+            </div>
+            <div id='book-ideas'>
+                <h2>Future Book Ideas:</h2>
+                <div id='idea-gallery'>
+                {bookIdeas.map((book) => {
+                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
+                })}
+                </div>
             </div>
         </div>
     )

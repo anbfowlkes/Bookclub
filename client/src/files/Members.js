@@ -10,15 +10,49 @@ let Members = () => {
     let [editBool, setEditBool] = useState(false)
     let [showDeletes, setShowDeletes] = useState(false)
     let [newMemberBool, setNewMemberBool] = useState(false)
+    let [activeMembers, setActiveMembers] = useState([])
+    let [inMemorium, setInMemorium] = useState([])
 
+    let getLastName = (str) => {
+        str = str.split('')
+        let bool = false
+        let cont = []
+        for (let i = 0; i < str.length; i++) {
+            if (bool) {
+                cont.push(str[i])
+            }
+            if (str[i] === ' ') {
+                bool = true
+            }
+        }
+        let s = ''
+        for (let i = 0; i < cont.length; i++) {
+            s = s + cont[i]
+        }
+        // console.log(s)
+        return s
+    }
 
     let getMembers = async () => {
         let req = await fetch('http://localhost:3000/members')
         let res = await req.json()
         console.log(res)
         res = res.sort((a, b) => {
-            return a.name < b.name ? -1 : 1
+            let aLast = getLastName(a.name)
+            let bLast = getLastName(b.name)
+            return aLast < bLast ? -1 : 1
         })
+        let a = []
+        let b = []
+        res.forEach((item) => {
+            if (item.active === true) {
+                a.push(item)
+            } else {
+                b.push(item)
+            }
+        })
+        setActiveMembers(a)
+        setInMemorium(b)
         setMembersArray(res)
     }
 
@@ -56,7 +90,7 @@ let Members = () => {
     let c = 0
 
     return(
-        <>
+        <div>
             <div>
                 <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
             </div>
@@ -77,14 +111,19 @@ let Members = () => {
                 <h2>Active Members</h2>
             </div>
             <div id='member-map'>
-                {membersArray.map((member) => {
+                {activeMembers.map((member) => {
                     return <MemberCard showDeletes={showDeletes} getMembers={getMembers} getFavorites={getFavorites} memberId={member.id} booksArray={booksArray} favoritesData={favoritesData} editBool={editBool} key={c++} name={member.name} image={member.image} active={member.active} />
                 })}
             </div>
             <div id='mem-mem'>
-                <h2>In Memorium:</h2>
+                <h2>In Memoriam</h2>
             </div>
-        </>
+            <div id='member-map'>
+                {inMemorium.map((member) => {
+                    return <MemberCard showDeletes={showDeletes} getMembers={getMembers} getFavorites={getFavorites} memberId={member.id} booksArray={booksArray} favoritesData={favoritesData} editBool={editBool} key={c++} name={member.name} image={member.image} active={member.active} />
+                })}
+            </div>
+        </div>
     )
 }
 

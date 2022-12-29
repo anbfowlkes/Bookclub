@@ -15,10 +15,56 @@
     /* border: solid black; */
     width: 45em;
     margin-bottom: 5em;
-    background: linear-gradient(90deg, rgb(208, 251, 251), rgb(193, 217, 234));
+    /* background: linear-gradient(90deg, rgb(208, 251, 251), rgb(193, 217, 234)); */
+    background: rgb(0,0,0,.8);
     border-radius: 2em;
 }
 
 #next-book > h2 {
+    color: white;
+    margin-top: 0.2em;
+}
+
+#next-book > h2 {
     font-size: 3em;
+}
+
+#upcoming-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, .8);
+    border-radius: 2em;
+    width: 45em;
+    margin-bottom: 5em;
+}
+
+#upcoming-books > h2 {
+    color: white;
+}
+
+#book-ideas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, .8);
+    border-radius: 2em;
+    width: 90em;
+    margin-bottom: 15em;
+}
+
+#book-ideas > h2 {
+    color: white;
+}
+
+#idea-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    flex-wrap: wrap;
+    text-align: center;
 }

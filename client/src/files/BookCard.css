@@ -2,18 +2,38 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
 }
 
 #book-info {
-    display: flex;
-    flex-direction: column;
     /* margin-left: 4em; */
     width: 12em;
     /* background: linear-gradient(90deg, rgb(255, 255, 255) 60%, rgb(156, 153, 156)); */
     background: linear-gradient(90deg,
                 rgb(255, 255, 255), 40%,
-                rgb(156, 153, 156))
+                rgb(156, 153, 156));
                 /* rgb(68, 67, 67),40%) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#bk-img-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(156, 153, 156) 40%, rgb(255, 255, 255));
+    /* background: black; */
+    /* background-color: linear-gradient(90deg,
+                rgb(156, 153, 156)), 40%,
+                rgb(255, 255, 255); */
+    /* border: solid black; */
 }
 
 #book-info p {
@@ -27,7 +47,7 @@
 #card-buttons {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2em;
 }
 
 #past-books{
@@ -37,4 +57,12 @@
 #add-book-form{
     display: flex;
     flex-direction: column;
+}
+
+#h-rule {
+    border-top: 1px solid black;
+    border-bottom: none;
+    width: 90%;
+    margin-top: -0.2em;
+    margin-bottom: 0.8em;
 }

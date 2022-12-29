@@ -2,25 +2,37 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #member-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 #member-info p {
-    margin-top: -5px;
+    margin: 0;
+    background: white;
+    border: solid black;
+    border-radius: 0.5em;
+    /* max-width: 5em; */
+    /* border: solid black; */
 }
 
 #member-card-image {
-    width: 100px;
+    width: 7em;
+    margin: 0;
 }
 
 #member-div {
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
+    align-items: center;
 }
 
 #pic-and-info {
@@ -28,6 +40,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 10em;
+    /* border: solid black; */
+}
+
+#member-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 10em;
+    /* border: solid red; */
+    width: 100%;
+    /* height: 10em; */
+    border: solid black;
+}
+
+#member-img img {
+    /* width: 100%; */
+    max-width: 10em;
+    object-fit: cover;
+    /* border-radius: 0.5em; */
+    height: 10em;
+    border: 12px solid #997950;
+    outline: 5px solid #43270F;
+}
+/* 
+#member-img img.frame {
+    img.frame {
+            border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch;
+            border-color: #f4be52;
+            border-style: inset;
+            border-width: 60px;
+            display: block;
+            width: 40%;
+            height: auto;
+            background-color: #ffe;
+            margin: 0 auto;
+        }
+} */
+
+#member-img p {
+    /* width: 100%; */
+    max-width: 10em;
+    object-fit: cover;
+    border-radius: 0.5em;
+    height: 10em;
+    background-color: white;
+    text-align: center;
 }
 
 #member-map {
@@ -36,15 +96,33 @@
     justify-content: center;
     align-items: center;
     margin-top: 4em;
+    gap: 3em;
+    text-align: center;
 }
 
 #act-mem {
     text-align: center;
     margin-top: -1em;
-    margin-bottom: -2em;
+    margin-bottom: -2.3em;
     font-size: 1.4em;
 }
 
 #mem-mem {
     text-align: center;
+    margin-top: 2em;
+    margin-bottom: -2.5em;
+    background: green;
+    width: 20em;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
 }
+#mem-mem > h2 {
+    margin: 0 auto;
+}
+

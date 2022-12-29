@@ -26,10 +26,11 @@ let BookCard = ({editBool,getBooks,id,title,author,imageUrl,fiction,leader,date,
                 <h4>{title}</h4>
                 <p>By {author}</p>
                 {fiction ? <p>{'Fiction'}</p> : <p>{'Non-Fiction'}</p>}
-                <p>Presenter: {leader}</p>
-                <p>Mtg. Date: {dateDisplayer(date)}</p>
+                {leader === 'TBD' ? null : <hr id='h-rule'></hr>}
+                {date === '01/01/0000' ? null : <p>Mtg. Date: {dateDisplayer(date)}</p>}
+                {leader === 'TBD' ? null : <p>Presenter: {leader}</p>}
             </div>
-            <div>
+            <div id='bk-img-div'>
                 <img id='book-card-image' src={imageUrl} />
             </div>
             {editBool ?

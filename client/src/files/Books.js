@@ -82,7 +82,7 @@ let Books = () => {
         if (monthNum === 12) {
             month = "Dec"
         }
-        return month + ", " + date[6]+date[7]+date[8]+date[9]
+        return month + ". " + date[6]+date[7]+date[8]+date[9]
     }
 
     let sortChange = (e,booksArray) => {
@@ -130,9 +130,6 @@ let Books = () => {
 
     return(
         <div id='past-books-container'>
-            <div>
-                <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
-            </div>
             {editBool ? 
                 <div>
                     <button onClick={() => setNewBookBool(prev => !prev)}>Add a Book</button>
@@ -154,7 +151,7 @@ let Books = () => {
             <div>
                 <form>
                     <select onChange = {(e) => handleFavorites(e)}>
-                        <option>Favorited By:</option>
+                        <option>Favorites of:</option>
                         <option>All</option>
                         {favoritesData.map((item) => {
                             if (item.books.length > 0) {
@@ -166,12 +163,16 @@ let Books = () => {
                     </select>
                 </form>
             </div>
+            <h1 id='past-header'>Past Books</h1>
             <div id='past-books'>
                 {booksShown.map((book) => {
                     return(
                         <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
                         )
                     })}
+            </div>
+            <div id='edit-books-div'>
+                <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
             </div>
         </div>
     )
