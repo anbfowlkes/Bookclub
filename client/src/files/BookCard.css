@@ -5,11 +5,14 @@
     justify-content: center;
     align-items: center;
     height: 20em;
+    font-family: 'Verdana';
+    /* font-weight: bold; */
+    /* font-size: 16px; */
 }
 
 #book-info {
     /* margin-left: 4em; */
-    width: 12em;
+    width: 14em;
     /* background: linear-gradient(90deg, rgb(255, 255, 255) 60%, rgb(156, 153, 156)); */
     background: linear-gradient(90deg,
                 rgb(255, 255, 255), 40%,
@@ -64,5 +67,5 @@
     border-bottom: none;
     width: 90%;
     margin-top: -0.2em;
-    margin-bottom: 0.8em;
+    margin-bottom: 1.5em;
 }

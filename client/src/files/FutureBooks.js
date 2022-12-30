@@ -123,7 +123,7 @@ let FutureBooks = () => {
                 <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={futureBooks[0].id} title={futureBooks[0].title} author={futureBooks[0].author} imageUrl={futureBooks[0].image_url} fiction={futureBooks[0].fiction} leader={futureBooks[0].leader} date={futureBooks[0].meeting_date} dateDisplayer={dateDisplayer} />
             </div> */}
             <div id='next-book'>
-                <h2>Next Book:</h2>
+                <h2>Our Next Book:</h2>
                 {futureBooks.map((book) => {
                     return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
                 })}

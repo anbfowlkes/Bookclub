@@ -2,8 +2,23 @@ import { useEffect, useState } from 'react'
 import BookCard from './BookCard.js'
 import AddBook from './AddBook.js'
 import './Books.css'
+import ReactDropdown from 'react-dropdown'
+import Dropdown from './Dropdown'
 
 let Books = () => {
+
+    let titleChanger = (title) => {
+        if (title.slice(0, 2) === "A ") {
+            return title.slice(2)
+        } else if (title.slice(0, 4) === 'The ') {
+            return title.slice(4)
+        } else if (title.slice(0, 3) === 'An ') {
+            return title.slice(3)
+        } else {
+            return title
+        }
+    }
+
 // winter
     let [editBool, setEditBool] = useState(false)
 
@@ -19,7 +34,9 @@ let Books = () => {
         let res = await req.json()
         console.log(res)
         res = res.sort((a,b) => {
-            return a.title < b.title ? -1 : 1
+            let aTitle = titleChanger(a.title)
+            let bTitle = titleChanger(b.title)
+            return aTitle < bTitle ? -1 : 1
         })
         setBooksArray(res)
         setBooksShown(res)
@@ -71,7 +88,7 @@ let Books = () => {
             month = "Aug"
         }
         if (monthNum === 9) {
-            month = "Sep"
+            month = "Sept"
         }
         if (monthNum === 10) {
             month = "Oct"
@@ -86,14 +103,17 @@ let Books = () => {
     }
 
     let sortChange = (e,booksArray) => {
+        e.preventDefault()
         console.log(e.target.value)
         if (e.target.value === 'Sort By:') {
             return
         }
-        let books = [...booksArray]
+        let books = [...booksShown]
         if (e.target.value === 'Title') {
             books = books.sort((a,b) => {
-                return a.title < b.title ? -1 : 1
+                let aTitle = titleChanger(a.title)
+                let bTitle = titleChanger(b.title)
+                return aTitle < bTitle ? -1 : 1
             })
         } else if (e.target.value === 'Newest') {
             books = books.sort((a,b) => {
@@ -108,7 +128,7 @@ let Books = () => {
                 return x < y ? -1 : 1
             })
         }
-        setBooksArray(books)
+        setBooksShown(books)
         console.log('still running')
     }
 
@@ -127,6 +147,9 @@ let Books = () => {
         // setBooksShown()
     }
 
+    let options = ['Title', 'Newest', 'Oldest']
+    const defaultOption = options[0]
+
 
     return(
         <div id='past-books-container'>
@@ -138,16 +161,24 @@ let Books = () => {
             
             {newBookBool && editBool ? <AddBook getBooks={getBooks} /> : null }
             <div>
-                <form>
+                <form onSubmit={(e)=>sortChange(e,booksArray) }>
                     <select onChange={(e)=>sortChange(e,booksArray)}>
                         <option>Sort By:</option>
                         <option>Title</option>
                         <option>Newest</option>
                         <option>Oldest</option>
                     </select>
-                    <input type='submit' />
                 </form>
             </div>
+
+            {/* <div>
+                <ReactDropdown
+                    options={options}
+                    value={defaultOption}
+                    onSortChange={({value}) => sortChange(value,booksArray)}
+                />
+            </div> */}
+            
             <div>
                 <form>
                     <select onChange = {(e) => handleFavorites(e)}>

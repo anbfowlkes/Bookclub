@@ -27,9 +27,24 @@
 #past-header {
     font-size: 5em;
     margin: 0.5em 0 -1em 0;
+    background: rgb(255,105,193);
+    padding: 0 2em;
+    border-radius: 2em;
+    font-family: 'Poor Richard';
 }
 
 #edit-books-div {
     margin-top: 2em;
     margin-bottom: 5em;
+}
+
+.Dropdown-root {
+    width: 25em;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.Dropdown-menu {
+    max-height: 31em;
+    text-align: left;
 }
