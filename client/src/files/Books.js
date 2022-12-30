@@ -143,7 +143,7 @@ let Books = () => {
 
     let handleFavorites = (e) => {
         console.log('hi')
-        if (e.target.value === 'All') {
+        if (e.target.value === 'All Books') {
             setBooksShown(booksArray)
             return
         }
@@ -169,41 +169,48 @@ let Books = () => {
                 : null}
             
             {newBookBool && editBool ? <AddBook getBooks={getBooks} /> : null }
-            <div>
-                <form onSubmit={(e)=>sortChange(e,booksArray) }>
-                    <select onChange={(e)=>sortChange(e,booksArray)}>
-                        <option>Sort By:</option>
-                        <option>Title</option>
-                        <option>Most Recent</option>
-                        <option>Earliest</option>
-                    </select>
-                </form>
-            </div>
+            
+            <h1 id='past-header'>Past Books</h1>
 
-            {/* <div>
-                <ReactDropdown
+            <div id='sorting-div'>
+
+
+                <div>
+                    <form onSubmit={(e) => sortChange(e, booksArray)}>
+                        <select onChange={(e) => sortChange(e, booksArray)}>
+                            <option>Sort By:</option>
+                            <option>Title</option>
+                            <option>Most Recent</option>
+                            <option>Earliest</option>
+                        </select>
+                    </form>
+                </div>
+
+                {/* <div>
+                    <ReactDropdown
                     options={options}
                     value={defaultOption}
                     onSortChange={({value}) => sortChange(value,booksArray)}
-                />
-            </div> */}
-            
-            <div>
-                <form>
-                    <select onChange = {(e) => handleFavorites(e)}>
-                        <option>Favorites of:</option>
-                        <option>All</option>
-                        {favoritesData.map((item) => {
-                            if (item.books.length > 0) {
-                                return <option>{item.name}</option>
-                            } else {
-                                return
-                            }
-                        })}
-                    </select>
-                </form>
+                    />
+                </div> */}
+
+                <div style={{}}>
+                    <form>
+                        <select onChange={(e) => handleFavorites(e)}>
+                            <option>Member Favorites:</option>
+                            <option>All Books</option>
+                            {favoritesData.map((item) => {
+                                if (item.books.length > 0) {
+                                    return <option>{item.name}</option>
+                                } else {
+                                    return
+                                }
+                            })}
+                        </select>
+                    </form>
+                </div>
             </div>
-            <h1 id='past-header'>Past Books</h1>
+
             <div id='past-books'>
                 {booksShown.map((book) => {
                     return(
@@ -214,6 +221,9 @@ let Books = () => {
             {/* <div id='edit-books-div'>
                 <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
             </div> */}
+
+            
+
             <img className='bg' src='https://upload.wikimedia.org/wikipedia/commons/5/57/The_Flower_Fields_flowers.jpg'></img>
         </div>
     )

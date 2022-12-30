@@ -44,6 +44,7 @@
     align-items: center;
     max-width: 10em;
     /* border: solid black; */
+    font-family: 'Verdana'
 }
 
 #member-img {

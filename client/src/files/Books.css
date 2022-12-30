@@ -48,3 +48,13 @@
     max-height: 31em;
     text-align: left;
 }
+
+#sorting-div {
+    margin-top: 7em;
+    margin-bottom: -10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
