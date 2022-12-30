@@ -3,7 +3,12 @@ import BookCard from './BookCard.js'
 import AddBook from './AddBook.js'
 import './Books.css'
 import ReactDropdown from 'react-dropdown'
-import Dropdown from './Dropdown'
+// import Dropdown from './Dropdown'
+import { Button, ButtonGroup, DropdownButton, MenuItem } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown';
+// import DropdownButton from 'react-bootstrap/DropdownButton';
+
+
 
 let Books = () => {
 
@@ -156,6 +161,15 @@ let Books = () => {
         // setBooksShown()
     }
 
+    let nameDisp = (name) => {
+        for (let i = 0; i < name.length; i++) {
+            if (name[i] === ' ') {
+                let a = name.slice(0,i)
+                return a + "'s Favorites"
+            }
+        }
+    }
+
     let options = ['Title', 'Newest', 'Oldest']
     const defaultOption = options[0]
 
@@ -174,17 +188,23 @@ let Books = () => {
 
             <div id='sorting-div'>
 
+                {/* <ReactDropdown id='hi' options={[1,2,3]} value={'hi'} onChange={()=>console.log('hi')}/> */}
 
-                <div>
-                    <form onSubmit={(e) => sortChange(e, booksArray)}>
-                        <select onChange={(e) => sortChange(e, booksArray)}>
-                            <option>Sort By:</option>
-                            <option>Title</option>
-                            <option>Most Recent</option>
-                            <option>Earliest</option>
-                        </select>
-                    </form>
+
+                <div className='menu'>
+                    <select className='custom-select' onChange={(e) => sortChange(e, booksArray)}>
+                        <option className='sel'>Sort By:</option>
+                        <option className='sel'>Title</option>
+                        <option className='sel'>Most Recent</option>
+                        <option className='sel'>Earliest</option>
+                    </select>
                 </div>
+
+                {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </DropdownButton> */}
 
                 {/* <div>
                     <ReactDropdown
@@ -194,20 +214,20 @@ let Books = () => {
                     />
                 </div> */}
 
-                <div style={{}}>
-                    <form>
-                        <select onChange={(e) => handleFavorites(e)}>
-                            <option>Member Favorites:</option>
-                            <option>All Books</option>
-                            {favoritesData.map((item) => {
-                                if (item.books.length > 0) {
-                                    return <option>{item.name}</option>
-                                } else {
-                                    return
-                                }
-                            })}
-                        </select>
-                    </form>
+                <div className='menu'>
+                    
+                    <select className='custom-select' onChange={(e) => handleFavorites(e)}>
+                        {/* <option className='sel'>Member Favorites:</option> */}
+                        <option className='sel'>All Books</option>
+                        {favoritesData.map((item) => {
+                            if (item.books.length > 0) {
+                                return <option className='sel' value={item.name}>{nameDisp(item.name)}</option>
+                            } else {
+                                return
+                            }
+                        })}
+                    </select>
+                    
                 </div>
             </div>
 

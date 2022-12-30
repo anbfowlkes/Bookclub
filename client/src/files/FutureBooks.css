@@ -21,7 +21,7 @@
     /* background: linear-gradient(90deg, rgb(208, 251, 251), rgb(193, 217, 234)); */
     background: rgb(0,0,0,.8);
     border-radius: 2em;
-    padding-top: 1.8em;
+    padding-top: 0.8em;
 }
 
 #next-book > h2 {
@@ -42,11 +42,13 @@
     border-radius: 2em;
     width: 45em;
     margin-bottom: 5em;
+    padding-top: 0em;
 }
 
 #upcoming-books > h2 {
     color: white;
     font-size: 3em;
+    margin-top: 0.5em
 }
 
 #book-ideas {

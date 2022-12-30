@@ -192,3 +192,8 @@
     color: black;
     cursor: pointer;
 }
+
+.gallery-div {
+    /* border: solid white; */
+    height: 49em;
+}

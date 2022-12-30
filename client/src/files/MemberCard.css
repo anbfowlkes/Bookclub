@@ -42,7 +42,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 10em;
     /* border: solid black; */
     font-family: 'Verdana'
 }
@@ -83,14 +82,23 @@
         }
 } */
 
-#member-img p {
+#member-info p {
     /* width: 100%; */
-    max-width: 10em;
+    /* max-width: 10em; */
     object-fit: cover;
     border-radius: 0.5em;
-    height: 10em;
+    width: 12em;
+    height: 1.4em;
     background-color: white;
+    margin: 0.5em -1em 0 -1em;
     text-align: center;
+}
+
+#member-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #member-map {

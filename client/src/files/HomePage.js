@@ -22,7 +22,7 @@ let HomePage = () => {
             <div>
                 <h1 id='home-header'>Our Gladbook Club</h1>
             </div>
-            <div>
+            <div className='gallery-div'>
                 <PictureDisplay pictureData={pictureData} />
             </div>
             <div id='blurb'>

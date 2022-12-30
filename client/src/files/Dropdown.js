@@ -1,15 +1,15 @@
-let Dropdown = ({ options, selectedValue, onSortChange }) => {
+let Dropdown = ({ options }) => {
 
     return (
-        <select onChange={e => onSortChange(e.target.value)}>
+        <select id='hello' onChange={e => console.log(e.target.value)}>
             {/* doing some destructuring below on options, which is an array of objects */}
-            {options.map(({ value }) => {
+            {options.map(({ value, label }) => {
                 return (
                     <option
-                        selected={value == selectedValue}
+                        // selected={value == selectedValue}
                         value={value}
                     >
-                        {value}
+                        {label}
                     </option>
                 )
             })}

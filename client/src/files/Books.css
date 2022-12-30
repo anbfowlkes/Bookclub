@@ -38,6 +38,100 @@
     margin-bottom: 5em;
 }
 
+#sorting-div {
+    margin-top: 7em;
+    margin-bottom: -10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+/* .tick line {
+    stroke: #C0C0BB;
+}
+
+.tick text {
+    fill: #635F5D;
+    font-family: 'Poppins'
+} */
+
+/* .mark {
+    fill: #137B80
+} */
+
+.barchart-shield {
+    margin-left: 2.5em;
+    /* width: 6.25em; */
+}
+
+.barchart-nflshield {
+    width: 10em;
+    position: absolute;
+    top: 3.5em;
+}
+
+.barchart-outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.barchart-axis-label {
+    font-size: 2.2em;
+    fill: #635F5D
+}
+
+.Dropdown-root {
+    width: 25em;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.Dropdown-root:hover {
+    cursor: pointer;
+}
+
+.Dropdown-menu {
+    max-height: 31.25em;
+    text-align: left;
+}
+
+.Dropdown-menu:hover {
+    cursor: pointer;
+}
+
+.barchart-dropdown-label {
+    font-size: 2.2em;
+    color: #635F5D;
+    margin-right: 0.6em;
+}
+
+.barchart-menus-container {
+    margin-top: 4em;
+    margin-left: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid black; */
+}
+
+#Dropdown-control:hover {
+    cursor: pointer;
+}
+
+#hi {
+    background: white;
+    color: green;
+}
+
+#hello {
+    background: white;
+    width: 20em
+}
+
 .Dropdown-root {
     width: 25em;
     display: inline-block;
@@ -49,12 +143,45 @@
     text-align: left;
 }
 
-#sorting-div {
-    margin-top: 7em;
-    margin-bottom: -10em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    width: 12em;
+    font-size: 1.5em;
+}
+
+.custom-select:hover {
+    cursor: pointer;
+}
+
+.custom-select > option:hover {
+    cursor: pointer;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+
+.sel:hover {
+    /* display: none; */
+    /*hide original SELECT element: */
+    cursor: pointer;
+}
+
+.custom-select > option {
+    background-color: rgb(255, 105, 193);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
 }
