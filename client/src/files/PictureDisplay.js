@@ -7,8 +7,8 @@ let PictureDisplay = ( {pictureData} ) => {
     let [imgUrl, setImgUrl] = useState('https://i.imgur.com/vRMjVRk.jpg')
     let [picDesc, setPicDesc] = useState('Back row (L-R): Anne Baughman, Mary Helen Dolan, Ann Dillon,\nFront row (L-R): Edna Shafer, Marcie Ver Ploeg, Martha Kelly, Susan Baruch, Margaret Beck\nPhotograph by Don Ver Ploeg')
     
-    console.log(pictureIndex)
-    console.log(pictureData)
+    // console.log(pictureIndex)
+    // console.log(pictureData)
 
     let prevImg = () => {
         let a = pictureIndex
@@ -19,7 +19,7 @@ let PictureDisplay = ( {pictureData} ) => {
         } else {
             b = a - 1
         }
-        console.log(a)
+        // console.log(a)
         let x = (pictureIndex + 1) % pictureData.length
         setImgUrl(pictureData[b].image_url)
         setPictureIndex(b)

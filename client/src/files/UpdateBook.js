@@ -3,7 +3,7 @@ let UpdateBook = ( {id,getBooks} ) => {
     let updateTitle = async (e) => {
         e.preventDefault()
         let newTitle = e.target[0].value
-        console.log(newTitle)
+        // console.log(newTitle)
         let req = await fetch(`http://localhost:3000/books/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
@@ -14,7 +14,7 @@ let UpdateBook = ( {id,getBooks} ) => {
             }
         })
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         getBooks()
     }
 
@@ -31,7 +31,7 @@ let UpdateBook = ( {id,getBooks} ) => {
             }
         })
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         getBooks()
     }
 
@@ -48,7 +48,7 @@ let UpdateBook = ( {id,getBooks} ) => {
             }
         })
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         getBooks()
     }
 
@@ -65,7 +65,7 @@ let UpdateBook = ( {id,getBooks} ) => {
             }
         })
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         getBooks()
     }
 
@@ -87,17 +87,17 @@ let UpdateBook = ( {id,getBooks} ) => {
             }
         })
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         getBooks()
     }
 
     let updateFiction = (e) => {
         e.preventDefault()
-        console.log(e.target[0].value)
+        // console.log(e.target[0].value)
         if (e.target[0].value === 'Select Value') {
             return
         }
-        console.log('other')
+        // console.log('other')
     }
 
     return(

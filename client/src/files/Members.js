@@ -36,7 +36,7 @@ let Members = () => {
     let getMembers = async () => {
         let req = await fetch('http://localhost:3000/members')
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         res = res.sort((a, b) => {
             let aLast = getLastName(a.name)
             let bLast = getLastName(b.name)
@@ -80,7 +80,7 @@ let Members = () => {
     let getBooks = async () => {
         let req = await fetch('http://localhost:3000/books')
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         res = res.sort((a, b) => {
             return a.title < b.title ? -1 : 1
         })

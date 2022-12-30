@@ -9,7 +9,7 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
 
     let addFavorite = async (e) => {
         e.preventDefault()
-        console.log(e.target[0].value)
+        // console.log(e.target[0].value)
         let req = await fetch('http://localhost:3000/members/favorites', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -35,11 +35,11 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
     }
     
     let handleDelete = async (e) => {
-        console.log(e.target.value)
-        console.log(memberId)
+        // console.log(e.target.value)
+        // console.log(memberId)
         let req = await fetch(`http://localhost:3000/members/${memberId}/`, {method: 'DELETE'})
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         getMembers()
     }
     // console.log('favorites data: ', favoritesData)

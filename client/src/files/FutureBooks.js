@@ -14,22 +14,22 @@ let FutureBooks = () => {
     let getBooks = async () => {
         let req = await fetch('http://localhost:3000/books')
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         res = res.sort((a, b) => {
             return a.title < b.title ? -1 : 1
         })
         setBooksArray(res)
-        console.log(res)
+        // console.log(res)
         let x = new Date()
-        console.log(x)
+        // console.log(x)
         let y = res[0]
         console.log(y.meeting_date)
         let z = new Date(y.meeting_date)
-        console.log(z)
+        // console.log(z)
         if (x < z) {
-            console.log('first')
+            // console.log('first')
         } else {
-            console.log('second')
+            // console.log('second')
         }
         let myArray = []
         let ideaArray = []
@@ -42,7 +42,7 @@ let FutureBooks = () => {
                 ideaArray.push(item)
             }
         })
-        console.log(myArray)
+        // console.log(myArray)
         // let next = myArray[0]
         // myArray.forEach((book) => {
         //     if (new Date(book.meeting_date) < new Date(next.meeting_date)) {
@@ -53,14 +53,14 @@ let FutureBooks = () => {
         myArray = myArray.sort((a,b) => {
             return new Date(a.meeting_date) < new Date(b.meeting_date) ? -1 : 1
         })
-        console.log('next book: ', myArray[0])
+        // console.log('next book: ', myArray[0])
         setNextBook(myArray[0])
         let a = []
         a.push(myArray[0])
-        console.log(myArray)
+        // console.log(myArray)
         setFutureBooks(a)
         myArray.shift()
-        console.log('rest: ', myArray)
+        // console.log('rest: ', myArray)
         setRestOfBooks(myArray)
         setBookIdeas(ideaArray)
     }

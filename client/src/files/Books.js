@@ -37,7 +37,7 @@ let Books = () => {
     let getBooks = async () => {
         let req = await fetch('http://localhost:3000/books')
         let res = await req.json()
-        console.log(res)
+        // console.log(res)
         let x = new Date()
         let myArray = []
         res.forEach((item) => {
@@ -116,9 +116,17 @@ let Books = () => {
         return month + ". " + date[6]+date[7]+date[8]+date[9]
     }
 
+    let getLastName = (name) => {
+        for (let i = 0; i < name.length; i++) {
+            if (name[i] === ' ') {
+                return name.slice(i+1).toUpperCase()
+            }
+        }
+    }
+
     let sortChange = (e,booksArray) => {
         e.preventDefault()
-        console.log(e.target.value)
+        // console.log(e.target.value)
         if (e.target.value === 'Sort By:') {
             return
         }
@@ -128,6 +136,12 @@ let Books = () => {
                 let aTitle = titleChanger(a.title)
                 let bTitle = titleChanger(b.title)
                 return aTitle < bTitle ? -1 : 1
+            })
+        } else if (e.target.value === 'Author') {
+            books = books.sort((a, b) => {
+                let x = getLastName(a.author)
+                let y = getLastName(b.author)
+                return x < y ? -1 : 1
             })
         } else if (e.target.value === 'Most Recent') {
             books = books.sort((a,b) => {
@@ -143,11 +157,11 @@ let Books = () => {
             })
         }
         setBooksShown(books)
-        console.log('still running')
+        // console.log('still running')
     }
 
     let handleFavorites = (e) => {
-        console.log('hi')
+        // console.log('hi')
         if (e.target.value === 'All Books') {
             setBooksShown(booksArray)
             return
@@ -195,6 +209,7 @@ let Books = () => {
                     <select className='custom-select' onChange={(e) => sortChange(e, booksArray)}>
                         <option className='sel'>Sort By:</option>
                         <option className='sel'>Title</option>
+                        <option className='sel'>Author</option>
                         <option className='sel'>Most Recent</option>
                         <option className='sel'>Earliest</option>
                     </select>
