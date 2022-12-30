@@ -33,13 +33,22 @@ let Books = () => {
         let req = await fetch('http://localhost:3000/books')
         let res = await req.json()
         console.log(res)
-        res = res.sort((a,b) => {
+        let x = new Date()
+        let myArray = []
+        res.forEach((item) => {
+            let meet = new Date(item.meeting_date)
+            if (meet < x && item.meeting_date != '01/01/0000') {
+                myArray.push(item)
+            }
+        })
+        
+        myArray = myArray.sort((a,b) => {
             let aTitle = titleChanger(a.title)
             let bTitle = titleChanger(b.title)
             return aTitle < bTitle ? -1 : 1
         })
-        setBooksArray(res)
-        setBooksShown(res)
+        setBooksArray(myArray)
+        setBooksShown(myArray)
     }
 
     let getFavorites = async () => {
@@ -115,13 +124,13 @@ let Books = () => {
                 let bTitle = titleChanger(b.title)
                 return aTitle < bTitle ? -1 : 1
             })
-        } else if (e.target.value === 'Newest') {
+        } else if (e.target.value === 'Most Recent') {
             books = books.sort((a,b) => {
                 let x = new Date(a.meeting_date)
                 let y = new Date(b.meeting_date)
                 return x < y ? 1 : -1
             })
-        } else if (e.target.value === 'Oldest') {
+        } else if (e.target.value === 'Earliest') {
             books = books.sort((a, b) => {
                 let x = new Date(a.meeting_date)
                 let y = new Date(b.meeting_date)
@@ -165,8 +174,8 @@ let Books = () => {
                     <select onChange={(e)=>sortChange(e,booksArray)}>
                         <option>Sort By:</option>
                         <option>Title</option>
-                        <option>Newest</option>
-                        <option>Oldest</option>
+                        <option>Most Recent</option>
+                        <option>Earliest</option>
                     </select>
                 </form>
             </div>
@@ -202,9 +211,10 @@ let Books = () => {
                         )
                     })}
             </div>
-            <div id='edit-books-div'>
+            {/* <div id='edit-books-div'>
                 <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
-            </div>
+            </div> */}
+            <img className='bg' src='https://upload.wikimedia.org/wikipedia/commons/5/57/The_Flower_Fields_flowers.jpg'></img>
         </div>
     )
 }

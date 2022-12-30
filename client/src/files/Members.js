@@ -40,6 +40,12 @@ let Members = () => {
         res = res.sort((a, b) => {
             let aLast = getLastName(a.name)
             let bLast = getLastName(b.name)
+            if (aLast === 'Baruch') {
+                return -1
+            }
+            if (bLast === 'Baruch') {
+                return 1
+            }
             return aLast < bLast ? -1 : 1
         })
         let a = []
@@ -91,9 +97,9 @@ let Members = () => {
 
     return(
         <div>
-            <div>
+            {/* <div>
                 <button onClick={() => setEditBool(prev => !prev)}>Edit Page</button>
-            </div>
+            </div> */}
             <div>
                 {editBool ? 
                 <button onClick={() => setNewMemberBool(prev => !prev)}>Add a Member</button>
@@ -123,6 +129,7 @@ let Members = () => {
                     return <MemberCard showDeletes={showDeletes} getMembers={getMembers} getFavorites={getFavorites} memberId={member.id} booksArray={booksArray} favoritesData={favoritesData} editBool={editBool} key={c++} name={member.name} image={member.image} active={member.active} />
                 })}
             </div>
+            <img className='bge' src='https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d15f032182f45.92816921.jpeg'></img>
         </div>
     )
 }

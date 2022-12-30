@@ -33,9 +33,10 @@ let HomePage = () => {
                 <h2>Our Humble Beginnings:</h2>
                 <img src='https://i.imgur.com/LDOQIbz.png' />
             </div>
-            <div id='edit-button'>
+            {/* <div id='edit-button'>
                 <button>Edit Page</button>
-            </div>
+            </div> */}
+            <img className='bg' src='https://www.healthytrees.com/wp-content/uploads/2019/09/The-Best-Trees-to-Plant-for-Fall-Colors.jpg'></img>
         </div>
     )
 }

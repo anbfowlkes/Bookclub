@@ -48,10 +48,10 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
         <div id='member-div'>
             <div id='pic-and-info'>
                 <div id='member-img'>
-                    {image === "" ? <div><p>No Image Shown</p></div> : <img id='member-card-image' src={image} />}
+                    {image === "" ? <div><p style={{width: '8em', height: '12em'}}>Not Pictured</p></div> : <img id='member-card-image' src={image} />}
                 </div>
                 <div id='member-info'>
-                    <p>{name}</p>
+                    <p> {name}</p>
                     {/* {active ? <p>{'Active'}</p> : <p>{'Not Active'}</p>} */}
                 </div>
             </div>

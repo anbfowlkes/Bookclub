@@ -85,13 +85,13 @@
 /* display: inline-block; */
     width: 20%;
     margin: 1em 1em;
-    height: 2em;
-    font-size: 1.4rem;
-    /* font-weight: 700; */
+    height: 1.6em;
+    font-size: 1.6rem;
+    font-weight: 700;
     background-color: #e8e056;
     border: none;
     /* border-color: white; */
-    min-width: 10em;
+    min-width: 8em;
     border-radius: 1em;
     /* border-radius: 1em; */
     font-family: 'Poor Richard';
@@ -122,18 +122,21 @@
 
 #blurb {
     color: black;
-    background-color: #e8e056;
-    width: 80em;
-    margin: auto;
+    background-color: #ff9b5f;
+    border: 0.2em solid black;
+    width: 60em;
+    margin: 1em auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* text-align: center; */
     font-size: large;
-    font-weight: 600;
-    padding-bottom: 1em;
-    border-radius: 1em;
+    /* font-weight: 600; */
+    /* padding-top: 1em; */
+    padding: 1em 2em 2em 2em;
+    /* border-radius: 1em; */
+    font-family: 'Verdana';
 }
 
 #blurb > p {
@@ -154,6 +157,10 @@
 #letter > h2 {
     margin-top: 1.5em;
     font-size: xx-large;
+}
+
+#letter > img {
+    border: 1em solid rgb(84, 84, 84);
 }
 
 #edit-button {

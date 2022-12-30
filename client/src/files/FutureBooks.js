@@ -108,7 +108,12 @@ let FutureBooks = () => {
         if (monthNum === 12) {
             month = "Dec"
         }
-        return month + ". " + date[6] + date[7] + date[8] + date[9]
+        if (date[3] == '0') {
+            return month + ". " + date[4] + ", " + date[6] + date[7] + date[8] + date[9]
+        } else {
+            return month + ". " +date[3] + date[4]+ ", " + date[6] + date[7] + date[8] + date[9]
+        }
+        
     }
 
     let c = 0
@@ -142,6 +147,7 @@ let FutureBooks = () => {
                 })}
                 </div>
             </div>
+            <img className='bg' src='https://st2.depositphotos.com/1393398/9138/i/950/depositphotos_91382138-stock-photo-winter-alley-with-snow-covered.jpg'></img>
         </div>
     )
 }
