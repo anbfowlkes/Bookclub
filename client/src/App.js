@@ -25,9 +25,9 @@ let App = () => {
         <Navbar background={background} setBackground={setBackground} />
           <Routes>
             <Route path='/' element={<HomePage />} />
-            <Route path='/books' element={<Books />} />
-            <Route path='/members' element={<Members />} />
-            <Route path='/futurebooks' element={<FutureBooks />} />
+            <Route path='/past-books' element={<Books />} />
+            <Route path='/club-members' element={<Members />} />
+            <Route path='/future-books' element={<FutureBooks />} />
           </Routes>
       </BrowserRouter>
       

@@ -11,17 +11,17 @@ let Navbar = ( {background,setBackground} ) => {
                 </div>
                 <div  className='nav-item'>
                     <li onClick={() => setBackground(1)}>
-                        <Link to="/futurebooks">FUTURE BOOKS</Link>
+                        <Link to="/future-books">FUTURE BOOKS</Link>
                     </li>
                 </div>
                 <div className='nav-item'>
                     <li onClick={() => setBackground(2)}>
-                        <Link to="/books">PAST BOOKS</Link>
+                        <Link to="/past-books">PAST BOOKS</Link>
                     </li>
                 </div>
                 <div className='nav-item'>
                     <li onClick={() => setBackground(3)} >
-                        <Link to="/members">MEMBERS</Link>
+                        <Link to="/club-members">MEMBERS</Link>
                     </li>
                 </div>
                 {/* <div className='nav-item'>
