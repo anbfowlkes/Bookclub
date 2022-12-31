@@ -206,8 +206,9 @@ let Books = () => {
 
 
                 <div className='menu'>
+                    <h4 className='dropdown-header'>Sort By:</h4>
                     <select className='custom-select' onChange={(e) => sortChange(e, booksArray)}>
-                        <option className='sel'>Sort By:</option>
+                        {/* <option className='sel'>Sort By:</option> */}
                         <option className='sel'>Title</option>
                         <option className='sel'>Author</option>
                         <option className='sel'>Most Recent</option>
@@ -230,7 +231,7 @@ let Books = () => {
                 </div> */}
 
                 <div className='menu'>
-                    
+                    <h4 className='dropdown-header'>Favorites Books Of:</h4>
                     <select className='custom-select' onChange={(e) => handleFavorites(e)}>
                         {/* <option className='sel'>Member Favorites:</option> */}
                         <option className='sel'>All Books</option>
