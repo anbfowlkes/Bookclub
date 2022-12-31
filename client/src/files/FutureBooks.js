@@ -12,7 +12,7 @@ let FutureBooks = () => {
     let [bookIdeas, setBookIdeas] = useState([])
 
     let getBooks = async () => {
-        let req = await fetch('http://localhost:3000/books')
+        let req = await fetch('https://gladbookclub.com/books')
         let res = await req.json()
         // console.log(res)
         res = res.sort((a, b) => {

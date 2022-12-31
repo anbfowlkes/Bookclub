@@ -10,7 +10,7 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
     let addFavorite = async (e) => {
         e.preventDefault()
         // console.log(e.target[0].value)
-        let req = await fetch('http://localhost:3000/members/favorites', {
+        let req = await fetch('https://gladbookclub.com/members/favorites', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -23,7 +23,7 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
 
     let removeFavorite = async (e) => {
         e.preventDefault()
-        let req = await fetch('http://localhost:3000/deletefavorite', {
+        let req = await fetch('https://gladbookclub.com/deletefavorite', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -37,7 +37,7 @@ let MemberCard = ( {showDeletes, getMembers, getFavorites, memberId, booksArray,
     let handleDelete = async (e) => {
         // console.log(e.target.value)
         // console.log(memberId)
-        let req = await fetch(`http://localhost:3000/members/${memberId}/`, {method: 'DELETE'})
+        let req = await fetch(`https://gladbookclub.com/members/${memberId}/`, {method: 'DELETE'})
         let res = await req.json()
         // console.log(res)
         getMembers()

@@ -35,7 +35,7 @@ let Books = () => {
     let [booksShown, setBooksShown] = useState([])
 
     let getBooks = async () => {
-        let req = await fetch('http://localhost:3000/books')
+        let req = await fetch('https://gladbookclub.com/books')
         let res = await req.json()
         // console.log(res)
         let x = new Date()
@@ -57,13 +57,13 @@ let Books = () => {
     }
 
     let getFavorites = async () => {
-        let req = await fetch('http://localhost:3000/myroute')
+        let req = await fetch('https://gladbookclub.com/myroute')
         let res = await req.json()
         setFavoritesData(res)
     }
 
     let getMembers = async () => {
-        let req = await fetch('http://localhost:3000/members')
+        let req = await fetch('https://gladbookclub.com/members')
         let res = await req.json()
         setMembersArray(res)
     }

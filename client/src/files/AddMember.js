@@ -14,7 +14,7 @@ let AddMember = ( {getMembers} ) => {
         if (active === 'Select Status:') {
             return
         }
-        let req = await fetch('http://localhost:3000/members', {
+        let req = await fetch('https://gladbookclub.com/members', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

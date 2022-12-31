@@ -34,7 +34,7 @@ let Members = () => {
     }
 
     let getMembers = async () => {
-        let req = await fetch('http://localhost:3000/members')
+        let req = await fetch('https://gladbookclub.com/members')
         let res = await req.json()
         // console.log(res)
         res = res.sort((a, b) => {
@@ -65,7 +65,7 @@ let Members = () => {
     let [favoritesData, setFavoritesData] = useState([])
 
     let getFavorites = async () => {
-        let req = await fetch('http://localhost:3000/myroute')
+        let req = await fetch('https://gladbookclub.com/myroute')
         let res = await req.json()
         res.forEach((item) => {
             let b = item.books
@@ -78,7 +78,7 @@ let Members = () => {
     }   
 
     let getBooks = async () => {
-        let req = await fetch('http://localhost:3000/books')
+        let req = await fetch('https://gladbookclub.com/books')
         let res = await req.json()
         // console.log(res)
         res = res.sort((a, b) => {

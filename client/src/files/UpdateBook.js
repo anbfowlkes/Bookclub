@@ -4,7 +4,7 @@ let UpdateBook = ( {id,getBooks} ) => {
         e.preventDefault()
         let newTitle = e.target[0].value
         // console.log(newTitle)
-        let req = await fetch(`http://localhost:3000/books/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/books/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 title: newTitle
@@ -21,7 +21,7 @@ let UpdateBook = ( {id,getBooks} ) => {
     let updateAuthor = async (e) => {
         e.preventDefault()
         let newAuthor = e.target[0].value
-        let req = await fetch(`http://localhost:3000/books/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/books/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 author: newAuthor
@@ -38,7 +38,7 @@ let UpdateBook = ( {id,getBooks} ) => {
     let updateLeader = async (e) => {
         e.preventDefault()
         let newLeader = e.target[0].value
-        let req = await fetch(`http://localhost:3000/books/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/books/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 leader: newLeader
@@ -55,7 +55,7 @@ let UpdateBook = ( {id,getBooks} ) => {
     let updateDate = async (e) => {
         e.preventDefault()
         let newDate = e.target[0].value
-        let req = await fetch(`http://localhost:3000/books/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/books/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 meeting_date: newDate
@@ -77,7 +77,7 @@ let UpdateBook = ( {id,getBooks} ) => {
         }
         let bool
         newGenre === 'Fiction' ? bool = true : bool = false
-        let req = await fetch(`http://localhost:3000/books/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/books/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 fiction: bool

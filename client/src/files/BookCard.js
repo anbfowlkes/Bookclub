@@ -14,7 +14,7 @@ let BookCard = ({editBool,getBooks,id,host,title,author,imageUrl,fiction,leader,
     let deleteClick = async () => {
         console.log('delete click clicked')
         console.log('id is: ', id)
-        let req = await fetch(`http://localhost:3000/books/${id}`, {method: 'DELETE'})
+        let req = await fetch(`https://gladbookclub.com/books/${id}`, {method: 'DELETE'})
         let res = await req.json()
         console.log(res)
         getBooks()

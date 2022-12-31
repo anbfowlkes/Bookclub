@@ -7,7 +7,7 @@ let HomePage = () => {
     let [pictureData, setPictureData] = useState([])
 
     let getPictures = async () => {
-        let req = await fetch('http://localhost:3000/pictures')
+        let req = await fetch('https://gladbookclub.com/pictures')
         let res = await req.json()
         console.log(res)
         setPictureData(res)

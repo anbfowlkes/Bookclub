@@ -3,7 +3,7 @@ let UpdateMember = ({ id, getMembers }) => {
     let updateName = async (e) => {
         e.preventDefault()
         let newName = e.target[0].value
-        let req = await fetch(`http://localhost:3000/members/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/members/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 name: newName
@@ -20,7 +20,7 @@ let UpdateMember = ({ id, getMembers }) => {
     let updateImage = async (e) => {
         e.preventDefault()
         let newImage = e.target[0].value
-        let req = await fetch(`http://localhost:3000/members/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 image: newImage
@@ -42,7 +42,7 @@ let UpdateMember = ({ id, getMembers }) => {
         }
         let bool
         newActive === 'Active' ? bool = true : bool = false
-        let req = await fetch(`http://localhost:3000/members/${id}`, {
+        let req = await fetch(`https://gladbookclub.com/${id}`, {
             method: "PATCH",
             body: JSON.stringify({
                 active: bool

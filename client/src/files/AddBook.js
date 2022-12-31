@@ -18,7 +18,7 @@ let AddBook = ( {getBooks} ) => {
             return
         }
         // console.log(genreBool)
-        let req = await fetch('http://localhost:3000/books', {
+        let req = await fetch('https://gladbookclub.com/books', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
