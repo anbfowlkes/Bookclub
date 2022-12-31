@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './BookCard.css'
 import UpdateBook from './UpdateBook'
 
-let BookCard = ({editBool,getBooks,id,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
+let BookCard = ({editBool,getBooks,id,host,title,author,imageUrl,fiction,leader,date,dateDisplayer}) => {
 
     let [showUpdate, setShowUpdate] = useState(false)
 
@@ -20,6 +20,16 @@ let BookCard = ({editBool,getBooks,id,title,author,imageUrl,fiction,leader,date,
         getBooks()
     }
 
+    let isFutureBook = (date) => {
+        let x = new Date(date)
+        let today = new Date()
+        if (x > today || date == '01/01/0000') {
+            return true
+        } else {
+            return false
+        }
+    }
+
     return(
         <div id='book-card'>
             <div id='book-info'>
@@ -29,6 +39,7 @@ let BookCard = ({editBool,getBooks,id,title,author,imageUrl,fiction,leader,date,
                 {leader === 'TBD' ? null : <hr id='h-rule'></hr>}
                 {date === '01/01/0000' ? null : <p>Mtg. Date: {dateDisplayer(date)}</p>}
                 {leader === 'TBD' ? null : <p>Presenter: {leader}</p>}
+                {isFutureBook(date) && leader != 'TBD' ? <p>Host: {host}</p> : null}
             </div>
             <div id='bk-img-div'>
                 <img id='book-card-image' src={imageUrl} />

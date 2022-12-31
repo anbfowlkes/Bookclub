@@ -36,6 +36,9 @@ let HomePage = () => {
             {/* <div id='edit-button'>
                 <button>Edit Page</button>
             </div> */}
+            <div id='footer-div'>
+                <p>For more information, contact Susan Baruch at: sbaruch@hotmail.com</p>
+            </div>
             <img className='bg' src='https://www.healthytrees.com/wp-content/uploads/2019/09/The-Best-Trees-to-Plant-for-Fall-Colors.jpg'></img>
         </div>
     )

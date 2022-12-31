@@ -130,20 +130,20 @@ let FutureBooks = () => {
             <div id='next-book'>
                 <h2>Our Next Book:</h2>
                 {futureBooks.map((book) => {
-                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
+                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} host={book.host} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
                 })}
             </div>
             <div id='upcoming-books'>
                 <h2>Upcoming Books:</h2>
                 {restOfBooks.map((book) => {
-                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
+                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} host={book.host} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
                 })}
             </div>
             <div id='book-ideas'>
                 <h2>Future Book Ideas:</h2>
                 <div id='idea-gallery'>
                 {bookIdeas.map((book) => {
-                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
+                    return <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} host={book.host} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer} />
                 })}
                 </div>
             </div>

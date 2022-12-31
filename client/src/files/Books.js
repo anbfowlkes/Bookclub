@@ -249,7 +249,7 @@ let Books = () => {
             <div id='past-books'>
                 {booksShown.map((book) => {
                     return(
-                        <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
+                        <BookCard editBool={editBool} key={c++} getBooks={getBooks} id={book.id} host={book.host} title={book.title} author={book.author} imageUrl={book.image_url} fiction={book.fiction} leader={book.leader} date={book.meeting_date} dateDisplayer={dateDisplayer}/>
                         )
                     })}
             </div>
