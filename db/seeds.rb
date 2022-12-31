@@ -6,14 +6,14 @@ BookMember.destroy_all
 Picture.destroy_all
 
 puts "Creating Pictures..."
-Picture.create!(image_url: 'https://i.imgur.com/vRMjVRk.jpg', year: 2004, description: 'Back row (L-R): Anne Baughman, Mary Helen Dolan, Ann Dillon,
+Picture.create!(image_url: 'https://i.imgur.com/beuVYL2.jpg', year: 2004, description: 'Back row (L-R): Anne Baughman, Mary Helen Dolan, Ann Dillon,
 Front row (L-R): Edna Shafer, Marcie Ver Ploeg, Martha Kelly, Susan Baruch, Margaret Beck
 Photograph by Don Ver Ploeg')
 
 Picture.create!(image_url: 'https://i.imgur.com/49lYnLj.jpg', year: 2007, description: 'Back row (L-R): Mary Helen Dolan, Susan Baruch, Debbie Cerrone, Edna Shafer, Marcie Ver Ploeg,
 Front row (L-R): Margaret Beck, Ann Dillon, Nancy Warren-Oliver, Louise Beetz
 Photograph by Don Ver Ploeg')
-Picture.create!(image_url: 'https://i.imgur.com/yhq2XrP.jpg', year: 2010, description: 'L-R: Nancy Warren-Oliver, Marcie Ver Ploeg, Susan Baruch, Ann Dillon, Mary Helen Dolan, Lisa Tiets, Edna Shafer, Margaret Beck, Debbie Cerrone, Karin Stuart, Louise Beetz
+Picture.create!(image_url: 'https://i.imgur.com/jyVMiv9.jpg', year: 2010, description: 'L-R: Nancy Warren-Oliver, Marcie Ver Ploeg, Susan Baruch, Ann Dillon, Mary Helen Dolan, Lisa Tiets, Edna Shafer, Margaret Beck, Debbie Cerrone, Karin Stuart, Louise Beetz
 Photograph by Bill Fowlkes')
 Picture.create!(image_url: 'https://i.imgur.com/17mylni.jpg', year: 2017, description: 'Back row (L-R): Louise Beetz, Lizzie Roth, Susan Baruch, Mary Helen Dolan,
 Middle row: Eleanor Newton, Nancy Warren-Oliver, Debbie Doyle, Lisa Tietz, Ann Dillon,
@@ -82,7 +82,7 @@ book11 = Book.create!(title: "The Red Tent", author: "Anita Diamant", image_url:
 
 book12 = Book.create!(title: "How the Irish Saved Civilization", author: "Thomas Cahill", image_url: "https://m.media-amazon.com/images/I/51g+AhzDC1L._AC_SY780_.jpg", fiction: false, leader: "Margaret", meeting_date: "10/01/2001")
 
-book13 = Book.create!(title: "On the Occasion of my Last Afternoon", author: "Kaye Gibbons", image_url: "https://images-na.ssl-images-amazon.com/images/I/51FUjhpllGL._AC_UL600_SR600,600_.jpg", fiction: true, leader: "Marj", meeting_date: "11/01/2001")
+book13 = Book.create!(title: "On the Occasion of my Last Afternoon", author: "Kaye Gibbons", image_url: "https://m.media-amazon.com/images/I/51FUjhpllGL._AC_SY780_.jpg", fiction: true, leader: "Marj", meeting_date: "11/01/2001")
 
 book14 = Book.create!(title: "Christmas in Plains", author: "Jimmy Carter", image_url: "https://m.media-amazon.com/images/I/51Tg4tQRqNL.jpg", fiction: false, leader: "Caroline", meeting_date: "12/01/2001")
 
@@ -194,13 +194,13 @@ book67 = Book.create!(title: "Water for Elephants", author: "Sara Gruen", image_
 
 book68 = Book.create!(title: "The Buffalo Soldier", author: "Chris Bohjalian", image_url: "https://m.media-amazon.com/images/I/5175EdmtzXL._AC_SY780_.jpg", fiction: true, leader: "Ann", meeting_date: "05/01/2007")
 
-book69 = Book.create!(title: "Gilead", author: "Marilynne Robinson", image_url: "https://target.scene7.com/is/image/Target/GUEST_c70e5118-3997-4713-a794-650ea3e9bc0a?wid=488&hei=488&fmt=pjpeg", fiction: true, leader: "Margaret", meeting_date: "06/01/2007")
+book69 = Book.create!(title: "Gilead", author: "Marilynne Robinson", image_url: "https://m.media-amazon.com/images/I/415NicS7TyL._AC_SY780_.jpg", fiction: true, leader: "Margaret", meeting_date: "06/01/2007")
 
 book70 = Book.create!(title: "The Fountain Overflows", author: "Rebecca West", image_url: "https://cdn.shopify.com/s/files/1/0726/9203/products/The-Fountain-Overflows_2048x2048.jpg?v=1528394330", fiction: true, leader: "Kathleen", meeting_date: "09/01/2007")
 
 book71 = Book.create!(title: "The Echo Maker", author: "Richard Powers", image_url: "https://m.media-amazon.com/images/I/41lHLbU3TgL._AC_SY780_.jpg", fiction: true, leader: "Marcie", meeting_date: "10/01/2007")
 
-book72 = Book.create!(title: "One Thousand White Women", author: "Jim Fergus", image_url: "https://m.media-amazon.com/images/I/51YrxjP5g7L.jpg", fiction: true, leader: "Edna", meeting_date: "11/01/2007")
+book72 = Book.create!(title: "One Thousand White Women", author: "Jim Fergus", image_url: "https://pictures.abebooks.com/isbn/9780330445870-us.jpg", fiction: true, leader: "Edna", meeting_date: "11/01/2007")
 
 book73 = Book.create!(title: "The Locket", author: "Richard Paul Evans", image_url: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781668000434/the-locket-9781668000434_hr.jpg", fiction: true, leader: "Debbie C.", meeting_date: "12/01/2007")
 
@@ -270,15 +270,15 @@ book105 = Book.create!(title: "Let the Great World Spin", author: "Colum McCann"
 
 book106 = Book.create!(title: "My Reading Life", author: "Pat Conroy", image_url: "https://m.media-amazon.com/images/I/51Lz+xi4Y6L._AC_SY780_.jpg", fiction: false, leader: "Marcie", meeting_date: "04/11/2011")
 
-book107 = Book.create!(title: "Cutting for Stone", author: "Abraham Verghese", image_url: "https://target.scene7.com/is/image/Target/GUEST_3b30ea64-908d-4b15-874b-651fc84fa8f2?wid=488&hei=488&fmt=pjpeg", fiction: true, leader: "Mary Helen", meeting_date: "05/16/2011")
+book107 = Book.create!(title: "Cutting for Stone", author: "Abraham Verghese", image_url: "https://m.media-amazon.com/images/I/61enXVybbjL._AC_SY780_.jpg", fiction: true, leader: "Mary Helen", meeting_date: "05/16/2011")
 
 book108 = Book.create!(title: "A Death in the Family", author: "James Agee", image_url: "https://m.media-amazon.com/images/I/51LNmPVQPuL._AC_SY780_.jpg", fiction: true, leader: "Ann", meeting_date: "06/20/2011")
 
 book109 = Book.create!(title: "White Noise", author: "Don Delillo", image_url: "https://m.media-amazon.com/images/I/61Rldzfu0oL._AC_SY780_.jpg", fiction: true, leader: "Louise", meeting_date: "09/19/2011")
 
-book110 = Book.create!(title: "Someone Knows my Name", author: "Lawrence Hill", image_url: "https://m.media-amazon.com/images/I/516MM9dVQ0L.jpg", fiction: true, leader: "Sue", meeting_date: "10/17/2011")
+book110 = Book.create!(title: "Someone Knows my Name", author: "Lawrence Hill", image_url: "https://m.media-amazon.com/images/I/415H9v9v3dL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "10/17/2011")
 
-book111 = Book.create!(title: "Major Pettigrew’s Last Stand", author: "Helen Simonson", image_url: "https://images-na.ssl-images-amazon.com/images/I/91vrJQsMrYL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Edna", meeting_date: "11/21/2011")
+book111 = Book.create!(title: "Major Pettigrewls Last Stand", author: "Helen Simonson", image_url: "https://images-na.ssl-images-amazon.com/images/I/91vrJQsMrYL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Edna", meeting_date: "11/21/2011")
 
 book112 = Book.create!(title: "The Three Weissmans of Westport", author: "Cathleen Schine", image_url: "https://images-na.ssl-images-amazon.com/images/I/81n5HDImcPL._AC_UL900_SR615,900_.jpg", fiction: true, leader: "Ann", meeting_date: "12/19/2011")
 
@@ -370,7 +370,7 @@ book161 = Book.create!(title: "The Sympathizer", author: "Viet Thanh Nguyen", im
 
 book162 = Book.create!(title: "The Prize", author: "Dale Russakoff", image_url: "https://d28hgpri8am2if.cloudfront.net/book_images/cvr9781439110126_9781439110126_hr.jpg", fiction: false, leader: "Debbie", meeting_date: "09/19/2016")
 
-book163 = Book.create!(title: "My Brilliant Friend", author: "Elena Ferrante", image_url: "https://m.media-amazon.com/images/I/51SareCmCFL._SL500_.jpg", fiction: true, leader: "Marjorie", meeting_date: "10/17/2016")
+book163 = Book.create!(title: "My Brilliant Friend", author: "Elena Ferrante", image_url: "https://m.media-amazon.com/images/I/51I3AW4e1VS._AC_SY780_.jpg", fiction: true, leader: "Marjorie", meeting_date: "10/17/2016")
 
 book164 = Book.create!(title: "A Manual for Cleaning Women", author: "Lucia Berlin", image_url: "https://m.media-amazon.com/images/I/41hnvxz9GAL._AC_SY780_.jpg", fiction: true, leader: "Sue", meeting_date: "11/21/2016")
 
